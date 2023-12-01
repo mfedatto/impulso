@@ -120,7 +120,7 @@ entity e_valoresJsonPaginados as "ValoresJsonPaginados" {
     VigenteAte : date
 }
 
-entity e_valoresBinarios as "ValoresBinarios" {
+entity e_valoresBinariosBase64 as "ValoresBinariosBase64" {
     * Id : int <<PK>>
     --
     * IdChave : int <<FK>>
@@ -133,10 +133,10 @@ entity e_valoresBinarios as "ValoresBinarios" {
     VigenteAte : date
 }
 
-entity e_valoresBinariosPaginados as "ValoresBinariosPaginados" {
+entity e_valoresBinariosBase64Paginados as "ValoresBinariosBase64Paginados" {
     * Id : int <<PK>>
     --
-    * IdValorBinario : int <<FK>>
+    * IdValorBinarioBase64 : int <<FK>>
     * Valor : text
     * Pagina : int
     --
@@ -154,8 +154,8 @@ e_chaves ||--o{ e_valoresTextos
 e_valoresTextos |o--o{ e_valoresTextosPaginados
 e_chaves ||--o{ e_valoresJson
 e_valoresJson |o--o{ e_valoresJsonPaginados
-e_chaves ||--o{ e_valoresBinarios
-e_valoresBinarios |o--o{ e_valoresBinariosPaginados
+e_chaves ||--o{ e_valoresBinariosBase64
+e_valoresBinariosBase64 |o--o{ e_valoresBinariosBase64Paginados
 e_chaves ||--o{ e_valoresLogicos
 e_chaves ||--o{ e_valoresDatas
 
