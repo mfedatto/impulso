@@ -1,0 +1,64 @@
+@startuml config-provider-mer
+
+!include ./_puml/defaults.puml
+
+title "Modelo Entidade Relacional\nConfig Provider API\n"
+
+' hide the spot
+hide circle
+
+' avoid problems with angled crows feet
+skinparam linetype ortho
+
+left to right direction
+
+entity e_aplicacoes as "Aplicacoes" {
+    * AppId : uuid <<PK>>
+    --
+    * Nome : text
+    * Sigla : text
+    Aka : text
+    --
+    * Habilitado : bool
+    VigenteDe : date
+    VigenteAte : date
+}
+
+entity e_tipos as "Tipos" {
+    * Id : int <<PK>>
+    --
+    * Nome : text <<unique>>
+    * Habilitado : bool
+}
+
+entity e_chaves as "Chaves" {
+    * Id : int <<PK>>
+    --
+    * AppId : uuid <<FK>>
+    * Nome : text
+    * IdTipo : int <<FK>>
+    * Lista : bool
+    * PermiteNulo : bool
+    IdChavePai : int <<FK>>
+    --
+    * Habilitado : bool
+    VigenteDe : date
+    VigenteAte : date
+}
+
+entity e_valoresNumericos as "ValoresNumericos" {
+    * Id : int <<PK>>
+    --
+    * IdChave : int <<FK>>
+    * Valor : int
+    --
+    * Habilitado : bool
+    VigenteDe : date
+    VigenteAte : date
+}
+
+e_aplicacoes ||--|{ e_chaves
+e_tipos ||--|{ e_chaves
+e_chaves |o--|| e_chaves
+
+@enduml
