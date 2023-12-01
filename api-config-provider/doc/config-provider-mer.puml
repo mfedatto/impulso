@@ -3,7 +3,7 @@
 !include ./_puml/defaults.puml
 !include ./_puml/mer.puml
 
-title "Modelo Entidade Relacional\nConfig Provider API\n"
+title "Modelo Entidade Relacional\nAPI Config Provider\n"
 
 entity e_aplicacoes as "Aplicacoes" {
     * AppId : uuid <<PK>>
@@ -67,10 +67,6 @@ entity e_valoresTextosPaginados as "ValoresTextosPaginados" {
     * IdValorText : int <<FK>>
     * Valor : text
     * Pagina : int
-    --
-    * Habilitado : bool
-    VigenteDe : date
-    VigenteAte : date
 }
 
 entity e_valoresLogicos as "ValoresLogicos" {
@@ -114,10 +110,6 @@ entity e_valoresJsonPaginados as "ValoresJsonPaginados" {
     * IdValorJson : int <<FK>>
     * Valor : text
     * Pagina : int
-    --
-    * Habilitado : bool
-    VigenteDe : date
-    VigenteAte : date
 }
 
 entity e_valoresBinariosBase64 as "ValoresBinariosBase64" {
@@ -139,10 +131,6 @@ entity e_valoresBinariosBase64Paginados as "ValoresBinariosBase64Paginados" {
     * IdValorBinarioBase64 : int <<FK>>
     * Valor : text
     * Pagina : int
-    --
-    * Habilitado : bool
-    VigenteDe : date
-    VigenteAte : date
 }
 
 e_aplicacoes ||--|{ e_chaves
