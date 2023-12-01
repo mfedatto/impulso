@@ -7,10 +7,9 @@ public class WebApiInstaller : IServiceInstaller
 {
     public void Install(IServiceCollection services)
     {
-        // Add services to the container.
-        // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+        services.AddMvc(options => options.EnableEndpointRouting = false);
+        services.AddControllers();
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen();
-        services.AddControllers();
     }
 }
