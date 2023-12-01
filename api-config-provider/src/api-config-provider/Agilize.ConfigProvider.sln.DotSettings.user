@@ -1,0 +1,9 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;
+  &lt;Assembly Path="/usr/share/dotnet/packs/Microsoft.AspNetCore.App.Ref/8.0.0/ref/net8.0/Microsoft.AspNetCore.dll" /&gt;
+  &lt;Assembly Path="/usr/share/dotnet/shared/Microsoft.AspNetCore.App/8.0.0/Microsoft.AspNetCore.dll" /&gt;
+  &lt;PhysicalFolder Path="/home/fedatto/.nuget/packages/microsoft.aspnetcore.openapi/8.0.0" Loaded="True" /&gt;
+&lt;/AssemblyExplorer&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f621a565_002D0903_002D4d44_002Dbe65_002D229414fc1d47/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from PagedListWrapperExtensionsTests.cs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;ProjectFile&gt;C50B5426-EC7A-44A1-A59F-25427DD3DB91/f:PagedListWrapperExtensionsTests.cs&lt;/ProjectFile&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

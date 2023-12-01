@@ -1,0 +1,16 @@
+/home/fedatto/Repos/github/mfedatto/impulso/api-config-provider/src/api-config-provider/Agilize.ConfigProvider.Domain/bin/Debug/net8.0/Agilize.ConfigProvider.Domain.deps.json
+/home/fedatto/Repos/github/mfedatto/impulso/api-config-provider/src/api-config-provider/Agilize.ConfigProvider.Domain/bin/Debug/net8.0/Agilize.ConfigProvider.Domain.dll
+/home/fedatto/Repos/github/mfedatto/impulso/api-config-provider/src/api-config-provider/Agilize.ConfigProvider.Domain/bin/Debug/net8.0/Agilize.ConfigProvider.Domain.pdb
+/home/fedatto/Repos/github/mfedatto/impulso/api-config-provider/src/api-config-provider/Agilize.ConfigProvider.Domain/bin/Debug/net8.0/Agilize.HttpExceptions.dll
+/home/fedatto/Repos/github/mfedatto/impulso/api-config-provider/src/api-config-provider/Agilize.ConfigProvider.Domain/bin/Debug/net8.0/Agilize.HttpExceptions.pdb
+/home/fedatto/Repos/github/mfedatto/impulso/api-config-provider/src/api-config-provider/Agilize.ConfigProvider.Domain/obj/Debug/net8.0/Agilize.ConfigProvider.Domain.csproj.AssemblyReference.cache
+/home/fedatto/Repos/github/mfedatto/impulso/api-config-provider/src/api-config-provider/Agilize.ConfigProvider.Domain/obj/Debug/net8.0/Agilize.ConfigProvider.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/fedatto/Repos/github/mfedatto/impulso/api-config-provider/src/api-config-provider/Agilize.ConfigProvider.Domain/obj/Debug/net8.0/Agilize.ConfigProvider.Domain.AssemblyInfoInputs.cache
+/home/fedatto/Repos/github/mfedatto/impulso/api-config-provider/src/api-config-provider/Agilize.ConfigProvider.Domain/obj/Debug/net8.0/Agilize.ConfigProvider.Domain.AssemblyInfo.cs
+/home/fedatto/Repos/github/mfedatto/impulso/api-config-provider/src/api-config-provider/Agilize.ConfigProvider.Domain/obj/Debug/net8.0/Agilize.ConfigProvider.Domain.csproj.CoreCompileInputs.cache
+/home/fedatto/Repos/github/mfedatto/impulso/api-config-provider/src/api-config-provider/Agilize.ConfigProvider.Domain/obj/Debug/net8.0/Agilize.ConfigProvider.Domain.sourcelink.json
+/home/fedatto/Repos/github/mfedatto/impulso/api-config-provider/src/api-config-provider/Agilize.ConfigProvider.Domain/obj/Debug/net8.0/Agilize.ConfigProvider.Domain.csproj.CopyComplete
+/home/fedatto/Repos/github/mfedatto/impulso/api-config-provider/src/api-config-provider/Agilize.ConfigProvider.Domain/obj/Debug/net8.0/Agilize.ConfigProvider.Domain.dll
+/home/fedatto/Repos/github/mfedatto/impulso/api-config-provider/src/api-config-provider/Agilize.ConfigProvider.Domain/obj/Debug/net8.0/refint/Agilize.ConfigProvider.Domain.dll
+/home/fedatto/Repos/github/mfedatto/impulso/api-config-provider/src/api-config-provider/Agilize.ConfigProvider.Domain/obj/Debug/net8.0/Agilize.ConfigProvider.Domain.pdb
+/home/fedatto/Repos/github/mfedatto/impulso/api-config-provider/src/api-config-provider/Agilize.ConfigProvider.Domain/obj/Debug/net8.0/ref/Agilize.ConfigProvider.Domain.dll

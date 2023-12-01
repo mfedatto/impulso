@@ -1,0 +1,111 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "Agilize.ConfigProvider.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Agilize.HttpExceptions": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Agilize.ConfigProvider.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Agilize.ConfigProvider.Domain.dll": {}
+        }
+      },
+      "Agilize.HttpExceptions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Agilize.HttpExceptions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Agilize.HttpExceptions.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Agilize.ConfigProvider.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Agilize.ConfigProvider.Domain/Agilize.ConfigProvider.Domain.csproj",
+      "msbuildProject": "../Agilize.ConfigProvider.Domain/Agilize.ConfigProvider.Domain.csproj"
+    },
+    "Agilize.HttpExceptions/1.0.0": {
+      "type": "project",
+      "path": "../Agilize.HttpExceptions/Agilize.HttpExceptions.csproj",
+      "msbuildProject": "../Agilize.HttpExceptions/Agilize.HttpExceptions.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "Agilize.ConfigProvider.Domain >= 1.0.0",
+      "Agilize.HttpExceptions >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/home/fedatto/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/home/fedatto/Repos/github/mfedatto/impulso/api-config-provider/src/api-config-provider/Agilize.ConfigProvider.Application/Agilize.ConfigProvider.Application.csproj",
+      "projectName": "Agilize.ConfigProvider.Application",
+      "projectPath": "/home/fedatto/Repos/github/mfedatto/impulso/api-config-provider/src/api-config-provider/Agilize.ConfigProvider.Application/Agilize.ConfigProvider.Application.csproj",
+      "packagesPath": "/home/fedatto/.nuget/packages/",
+      "outputPath": "/home/fedatto/Repos/github/mfedatto/impulso/api-config-provider/src/api-config-provider/Agilize.ConfigProvider.Application/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/fedatto/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "/home/fedatto/Repos/github/mfedatto/impulso/api-config-provider/src/api-config-provider/Agilize.ConfigProvider.Domain/Agilize.ConfigProvider.Domain.csproj": {
+              "projectPath": "/home/fedatto/Repos/github/mfedatto/impulso/api-config-provider/src/api-config-provider/Agilize.ConfigProvider.Domain/Agilize.ConfigProvider.Domain.csproj"
+            },
+            "/home/fedatto/Repos/github/mfedatto/impulso/api-config-provider/src/api-config-provider/Agilize.HttpExceptions/Agilize.HttpExceptions.csproj": {
+              "projectPath": "/home/fedatto/Repos/github/mfedatto/impulso/api-config-provider/src/api-config-provider/Agilize.HttpExceptions/Agilize.HttpExceptions.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

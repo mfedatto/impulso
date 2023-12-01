@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Agilize.ConfigProvider.Domain\Agilize.ConfigProvider.Domain.csproj" />
+      <ProjectReference Include="..\Agilize.HttpExceptions\Agilize.HttpExceptions.csproj" />
+    </ItemGroup>
+
+</Project>
