@@ -1,22 +1,39 @@
+using Agilize.ConfigProvider.Domain.Aplicacao;
 using Agilize.ConfigProvider.Domain.Wrappers;
+using Agilize.ConfigProvider.WebApi.Constants;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Agilize.ConfigProvider.WebApi.Controllers.Aplicacao;
 
-[Route("aplicacoes")]
+[Route(RouteTemplate.Aplicacoes)]
 public class AplicacaoController : Controller
 {
-    [HttpGet("")]
-    public async Task<ActionResult<PagedListWrapper<GetIndexResponseModel[]>>> Get_Index(
-        [FromQuery(Name = "app-id")] string? appId = null,
-        [FromQuery(Name = "nome")] string? nome = null,
-        [FromQuery(Name = "sigla")] string? sigla = null,
-        [FromQuery(Name = "aka")] string? aka = null,
-        [FromQuery(Name = "habilitado")] bool? habilitado = null,
-        [FromQuery(Name = "vigente-em")] DateTime? vigenteEm = null,
-        [FromQuery] int? skip = 0,
-        [FromQuery] int? limit = null)
+    private readonly IAplicacaoApplication _application;
+    
+    public AplicacaoController(IAplicacaoApplication application)
     {
-        return Ok();
+        _application = application;
+    }
+    
+    [HttpGet(RouteTemplate.AplicacoesGetIndex)]
+    public async Task<ActionResult<PagedListWrapper<GetIndexResponseModel>>> Get_Index(
+        [FromQuery(Name = NameFromQuery.AppId)] string? appId = null,
+        [FromQuery(Name = NameFromQuery.Nome)] string? nome = null,
+        [FromQuery(Name = NameFromQuery.Sigla)] string? sigla = null,
+        [FromQuery(Name = NameFromQuery.Aka)] string? aka = null,
+        [FromQuery(Name = NameFromQuery.Habilitado)] bool? habilitado = null,
+        [FromQuery(Name = NameFromQuery.VigenteEm)] DateTime? vigenteEm = null,
+        [FromQuery(Name = NameFromQuery.Skip)] int? skip = 0,
+        [FromQuery(Name = NameFromQuery.Limit)] int? limit = null)
+    {
+        return Ok(await _application.ObterListaDeAplicacoes(
+            appId,
+            nome,
+            sigla,
+            aka,
+            habilitado,
+            vigenteEm,
+            skip,
+            limit));
     }
 }

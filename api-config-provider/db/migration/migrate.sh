@@ -1,3 +1,5 @@
+#! /bin/bash
+
 SERVER='services.agz.vbox:5433'
 DB_NAME='config_provider'
 DB_USER='config_provider'

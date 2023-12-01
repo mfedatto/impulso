@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "dgSpecHash": "FYs/EK/Jy8n70zUiCEA4fp3nEao+YB7QQKlXPVTDSkEYqp+8iq2XgSAVcVL7a/PjQ8KTD9AV/sGeepUtEfw5nQ==",
+  "success": true,
+  "projectFilePath": "/home/fedatto/Repos/github/mfedatto/impulso/api-config-provider/src/api-config-provider/Agilize.ConfigProvider.Service/Agilize.ConfigProvider.Service.csproj",
+  "expectedPackageFiles": [
+    "/home/fedatto/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/home/fedatto/.nuget/packages/microsoft.netcore.targets/1.1.0/microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "/home/fedatto/.nuget/packages/system.collections/4.3.0/system.collections.4.3.0.nupkg.sha512",
+    "/home/fedatto/.nuget/packages/system.data.common/4.3.0/system.data.common.4.3.0.nupkg.sha512",
+    "/home/fedatto/.nuget/packages/system.globalization/4.3.0/system.globalization.4.3.0.nupkg.sha512",
+    "/home/fedatto/.nuget/packages/system.io/4.3.0/system.io.4.3.0.nupkg.sha512",
+    "/home/fedatto/.nuget/packages/system.reflection/4.3.0/system.reflection.4.3.0.nupkg.sha512",
+    "/home/fedatto/.nuget/packages/system.reflection.primitives/4.3.0/system.reflection.primitives.4.3.0.nupkg.sha512",
+    "/home/fedatto/.nuget/packages/system.resources.resourcemanager/4.3.0/system.resources.resourcemanager.4.3.0.nupkg.sha512",
+    "/home/fedatto/.nuget/packages/system.runtime/4.3.0/system.runtime.4.3.0.nupkg.sha512",
+    "/home/fedatto/.nuget/packages/system.runtime.extensions/4.3.0/system.runtime.extensions.4.3.0.nupkg.sha512",
+    "/home/fedatto/.nuget/packages/system.text.encoding/4.3.0/system.text.encoding.4.3.0.nupkg.sha512",
+    "/home/fedatto/.nuget/packages/system.text.regularexpressions/4.3.0/system.text.regularexpressions.4.3.0.nupkg.sha512",
+    "/home/fedatto/.nuget/packages/system.threading.tasks/4.3.0/system.threading.tasks.4.3.0.nupkg.sha512"
+  ],
+  "logs": []
+}

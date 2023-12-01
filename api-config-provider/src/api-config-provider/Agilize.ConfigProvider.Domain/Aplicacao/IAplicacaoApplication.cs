@@ -4,8 +4,7 @@ namespace Agilize.ConfigProvider.Domain.Aplicacao;
 
 public interface IAplicacaoApplication
 {
-    Task<IEnumerable<IAplicacao>> ObterListaDeAplicacoes(
-        out int total,
+    Task<PagedListWrapper<IAplicacao>> ObterListaDeAplicacoes(
         string? appId = null,
         string? nome = null,
         string? sigla = null,

@@ -4,10 +4,8 @@ namespace Agilize.ConfigProvider.Domain.MainDbContext;
 
 public interface IUnitOfWork
 {
-    IDbConnection Connection { get; }
-    IDbTransaction Transaction { get; }
+    IDbConnection DbConnection { get; }
 
-    void OpenConnection();
     void BeginTransaction();
     void Commit();
     void Rollback();
