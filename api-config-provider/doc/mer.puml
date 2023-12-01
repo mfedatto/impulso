@@ -1,16 +1,9 @@
 @startuml config-provider-mer
 
 !include ./_puml/defaults.puml
+!include ./_puml/mer.puml
 
 title "Modelo Entidade Relacional\nConfig Provider API\n"
-
-' hide the spot
-hide circle
-
-' avoid problems with angled crows feet
-skinparam linetype ortho
-
-left to right direction
 
 entity e_aplicacoes as "Aplicacoes" {
     * AppId : uuid <<PK>>
@@ -50,7 +43,7 @@ entity e_valoresNumeros as "ValoresNumeros" {
     * Id : int <<PK>>
     --
     * IdChave : int <<FK>>
-    * Valor : int
+    * Valor : number
     --
     * Habilitado : bool
     VigenteDe : date
@@ -62,6 +55,18 @@ entity e_valoresTextos as "ValoresTextos" {
     --
     * IdChave : int <<FK>>
     * Valor : text
+    --
+    * Habilitado : bool
+    VigenteDe : date
+    VigenteAte : date
+}
+
+entity e_valoresTextosPaginados as "ValoresTextosPaginados" {
+    * Id : int <<PK>>
+    --
+    * IdValorText : int <<FK>>
+    * Valor : text
+    * Pagina : int
     --
     * Habilitado : bool
     VigenteDe : date
@@ -94,7 +99,46 @@ entity e_valoresJson as "ValoresJson" {
     * Id : int <<PK>>
     --
     * IdChave : int <<FK>>
-    * Valor : date
+    * Valor : text
+    Checksum : text
+    NumeroDePaginas : int
+    --
+    * Habilitado : bool
+    VigenteDe : date
+    VigenteAte : date
+}
+
+entity e_valoresJsonPaginados as "ValoresJsonPaginados" {
+    * Id : int <<PK>>
+    --
+    * IdValorJson : int <<FK>>
+    * Valor : text
+    * Pagina : int
+    --
+    * Habilitado : bool
+    VigenteDe : date
+    VigenteAte : date
+}
+
+entity e_valoresBinarios as "ValoresBinarios" {
+    * Id : int <<PK>>
+    --
+    * IdChave : int <<FK>>
+    * Valor : text
+    Checksum : text
+    NumeroDePaginas : int
+    --
+    * Habilitado : bool
+    VigenteDe : date
+    VigenteAte : date
+}
+
+entity e_valoresBinariosPaginados as "ValoresBinariosPaginados" {
+    * Id : int <<PK>>
+    --
+    * IdValorBinario : int <<FK>>
+    * Valor : text
+    * Pagina : int
     --
     * Habilitado : bool
     VigenteDe : date
@@ -107,8 +151,12 @@ e_chaves |o--|| e_chaves
 
 e_chaves ||--o{ e_valoresNumeros
 e_chaves ||--o{ e_valoresTextos
+e_valoresTextos |o--o{ e_valoresTextosPaginados
+e_chaves ||--o{ e_valoresJson
+e_valoresJson |o--o{ e_valoresJsonPaginados
+e_chaves ||--o{ e_valoresBinarios
+e_valoresBinarios |o--o{ e_valoresBinariosPaginados
 e_chaves ||--o{ e_valoresLogicos
 e_chaves ||--o{ e_valoresDatas
-e_chaves ||--o{ e_valoresJson
 
 @enduml
