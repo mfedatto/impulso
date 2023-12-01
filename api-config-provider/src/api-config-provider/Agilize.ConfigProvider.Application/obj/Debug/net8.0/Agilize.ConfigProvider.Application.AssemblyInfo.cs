@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Agilize.ConfigProvider.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e8c48ec03e878bbcd21ee2660e1e642b3a96fcb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+556f3e8c7261f6de140c80ddd1e379edb9895aac")]
 [assembly: System.Reflection.AssemblyProductAttribute("Agilize.ConfigProvider.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Agilize.ConfigProvider.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

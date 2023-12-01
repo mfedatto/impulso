@@ -20,3 +20,5 @@
 /home/fedatto/Repos/github/mfedatto/impulso/api-config-provider/src/api-config-provider/Agilize.ConfigProvider.CrossCutting/bin/Debug/net8.0/Agilize.ConfigProvider.Application.pdb
 /home/fedatto/Repos/github/mfedatto/impulso/api-config-provider/src/api-config-provider/Agilize.ConfigProvider.CrossCutting/bin/Debug/net8.0/Agilize.ConfigProvider.Infrastructure.dll
 /home/fedatto/Repos/github/mfedatto/impulso/api-config-provider/src/api-config-provider/Agilize.ConfigProvider.CrossCutting/bin/Debug/net8.0/Agilize.ConfigProvider.Infrastructure.pdb
+/home/fedatto/Repos/github/mfedatto/impulso/api-config-provider/src/api-config-provider/Agilize.ConfigProvider.CrossCutting/bin/Debug/net8.0/Agilize.ConfigProvider.Service.dll
+/home/fedatto/Repos/github/mfedatto/impulso/api-config-provider/src/api-config-provider/Agilize.ConfigProvider.CrossCutting/bin/Debug/net8.0/Agilize.ConfigProvider.Service.pdb

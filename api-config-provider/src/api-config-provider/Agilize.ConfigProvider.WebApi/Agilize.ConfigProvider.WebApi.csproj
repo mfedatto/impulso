@@ -14,10 +14,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Extensions\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\Agilize.ConfigProvider.CrossCutting\Agilize.ConfigProvider.CrossCutting.csproj" />
       <ProjectReference Include="..\Agilize.HttpExceptions\Agilize.HttpExceptions.csproj" />
     </ItemGroup>

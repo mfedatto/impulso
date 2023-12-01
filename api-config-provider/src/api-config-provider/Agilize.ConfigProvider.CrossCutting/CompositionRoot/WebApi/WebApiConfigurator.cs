@@ -1,12 +1,21 @@
 using Agilize.HttpExceptions;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Hosting;
 
 namespace Agilize.ConfigProvider.CrossCutting.CompositionRoot.WebApi;
 
 public class WebApiConfigurator : IApplicationConfigurator
 {
-    public IApplicationBuilder Configure(IApplicationBuilder app)
+    public IApplicationBuilder Configure(WebApplication app)
     {
-        throw new Http501NaoImplementadoException();
+        if (app.Environment.IsDevelopment())
+        {
+            app.UseSwagger();
+            app.UseSwaggerUI();
+        }
+
+        app.UseHttpsRedirection();
+
+        return app;
     }
 }

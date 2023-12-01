@@ -402,6 +402,20 @@
           "bin/placeholder/Agilize.ConfigProvider.Infrastructure.dll": {}
         }
       },
+      "Agilize.ConfigProvider.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Agilize.ConfigProvider.Domain": "1.0.0",
+          "Agilize.HttpExceptions": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Agilize.ConfigProvider.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Agilize.ConfigProvider.Service.dll": {}
+        }
+      },
       "Agilize.HttpExceptions/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -1815,6 +1829,11 @@
       "path": "../Agilize.ConfigProvider.Infrastructure/Agilize.ConfigProvider.Infrastructure.csproj",
       "msbuildProject": "../Agilize.ConfigProvider.Infrastructure/Agilize.ConfigProvider.Infrastructure.csproj"
     },
+    "Agilize.ConfigProvider.Service/1.0.0": {
+      "type": "project",
+      "path": "../Agilize.ConfigProvider.Service/Agilize.ConfigProvider.Service.csproj",
+      "msbuildProject": "../Agilize.ConfigProvider.Service/Agilize.ConfigProvider.Service.csproj"
+    },
     "Agilize.HttpExceptions/1.0.0": {
       "type": "project",
       "path": "../Agilize.HttpExceptions/Agilize.HttpExceptions.csproj",
@@ -1826,6 +1845,7 @@
       "Agilize.ConfigProvider.Application >= 1.0.0",
       "Agilize.ConfigProvider.Domain >= 1.0.0",
       "Agilize.ConfigProvider.Infrastructure >= 1.0.0",
+      "Agilize.ConfigProvider.Service >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 8.0.0",
       "Microsoft.Extensions.DependencyInjection.Abstractions >= 8.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0"
@@ -1864,6 +1884,9 @@
             },
             "/home/fedatto/Repos/github/mfedatto/impulso/api-config-provider/src/api-config-provider/Agilize.ConfigProvider.Infrastructure/Agilize.ConfigProvider.Infrastructure.csproj": {
               "projectPath": "/home/fedatto/Repos/github/mfedatto/impulso/api-config-provider/src/api-config-provider/Agilize.ConfigProvider.Infrastructure/Agilize.ConfigProvider.Infrastructure.csproj"
+            },
+            "/home/fedatto/Repos/github/mfedatto/impulso/api-config-provider/src/api-config-provider/Agilize.ConfigProvider.Service/Agilize.ConfigProvider.Service.csproj": {
+              "projectPath": "/home/fedatto/Repos/github/mfedatto/impulso/api-config-provider/src/api-config-provider/Agilize.ConfigProvider.Service/Agilize.ConfigProvider.Service.csproj"
             }
           }
         }

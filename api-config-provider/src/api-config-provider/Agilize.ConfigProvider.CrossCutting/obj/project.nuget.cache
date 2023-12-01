@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1c4rLx45OLU1XJj1uYgZz3L4c+70sA4r2vnRZ6+lNdDrxr2NI3O9xSSBMCm98hHKQKtbzuLQrHZgyMqJOHiBAA==",
+  "dgSpecHash": "N1qiKdTt43KBzKzhg/XGplQ3ecd4FJRs0Allr65y/y8R5BvOiVwfBXEOBey88rVc2sdN0N7ajESTDpWm8IqqKg==",
   "success": true,
   "projectFilePath": "/home/fedatto/Repos/github/mfedatto/impulso/api-config-provider/src/api-config-provider/Agilize.ConfigProvider.CrossCutting/Agilize.ConfigProvider.CrossCutting.csproj",
   "expectedPackageFiles": [

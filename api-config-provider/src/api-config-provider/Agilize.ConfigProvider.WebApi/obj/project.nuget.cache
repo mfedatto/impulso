@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "jVgyIE6O2OlZAufj9XIYn5AVTZSLhdgDANvKK4zfQafWkqxgpdgYIOkMR7XF+8Qm8U9zLI/bM+LRQrKNLYxsKA==",
+  "dgSpecHash": "nheYrxsKn4yy3Jp2KmaVSBrP0oGPpIp7cg3cbaH9rmgFDjz6GGJ2G8cp5ZY0V/T10pgD8lVzdj58f/Wydr3zvw==",
   "success": true,
   "projectFilePath": "/home/fedatto/Repos/github/mfedatto/impulso/api-config-provider/src/api-config-provider/Agilize.ConfigProvider.WebApi/Agilize.ConfigProvider.WebApi.csproj",
   "expectedPackageFiles": [

@@ -4,5 +4,5 @@ namespace Agilize.ConfigProvider.CrossCutting.CompositionRoot;
 
 public interface IApplicationConfigurator
 {
-    IApplicationBuilder Configure(IApplicationBuilder app);
+    IApplicationBuilder Configure(WebApplication app);
 }
