@@ -46,7 +46,7 @@ entity e_chaves as "Chaves" {
     VigenteAte : date
 }
 
-entity e_valoresNumericos as "ValoresNumericos" {
+entity e_valoresNumeros as "ValoresNumeros" {
     * Id : int <<PK>>
     --
     * IdChave : int <<FK>>
@@ -57,8 +57,58 @@ entity e_valoresNumericos as "ValoresNumericos" {
     VigenteAte : date
 }
 
+entity e_valoresTextos as "ValoresTextos" {
+    * Id : int <<PK>>
+    --
+    * IdChave : int <<FK>>
+    * Valor : text
+    --
+    * Habilitado : bool
+    VigenteDe : date
+    VigenteAte : date
+}
+
+entity e_valoresLogicos as "ValoresLogicos" {
+    * Id : int <<PK>>
+    --
+    * IdChave : int <<FK>>
+    * Valor : bool
+    --
+    * Habilitado : bool
+    VigenteDe : date
+    VigenteAte : date
+}
+
+entity e_valoresDatas as "ValoresDatas" {
+    * Id : int <<PK>>
+    --
+    * IdChave : int <<FK>>
+    * Valor : date
+    --
+    * Habilitado : bool
+    VigenteDe : date
+    VigenteAte : date
+}
+
+entity e_valoresJson as "ValoresJson" {
+    * Id : int <<PK>>
+    --
+    * IdChave : int <<FK>>
+    * Valor : date
+    --
+    * Habilitado : bool
+    VigenteDe : date
+    VigenteAte : date
+}
+
 e_aplicacoes ||--|{ e_chaves
 e_tipos ||--|{ e_chaves
 e_chaves |o--|| e_chaves
+
+e_chaves ||--o{ e_valoresNumeros
+e_chaves ||--o{ e_valoresTextos
+e_chaves ||--o{ e_valoresLogicos
+e_chaves ||--o{ e_valoresDatas
+e_chaves ||--o{ e_valoresJson
 
 @enduml
