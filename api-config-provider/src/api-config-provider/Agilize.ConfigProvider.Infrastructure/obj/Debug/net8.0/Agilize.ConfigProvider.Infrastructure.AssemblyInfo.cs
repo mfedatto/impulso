@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Agilize.ConfigProvider.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e8c48ec03e878bbcd21ee2660e1e642b3a96fcb")]
 [assembly: System.Reflection.AssemblyProductAttribute("Agilize.ConfigProvider.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Agilize.ConfigProvider.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

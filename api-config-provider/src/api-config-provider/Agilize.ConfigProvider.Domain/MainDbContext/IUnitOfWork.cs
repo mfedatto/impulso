@@ -1,10 +1,14 @@
+using System.Data;
+
 namespace Agilize.ConfigProvider.Domain.MainDbContext;
 
 public interface IUnitOfWork
 {
-    IDbContext DbContext { get; }
+    IDbConnection Connection { get; }
+    IDbTransaction Transaction { get; }
+
+    void OpenConnection();
     void BeginTransaction();
     void Commit();
     void Rollback();
-    void Dispose();
 }
