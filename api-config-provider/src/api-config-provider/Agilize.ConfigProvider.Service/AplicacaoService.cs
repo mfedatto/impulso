@@ -1,4 +1,5 @@
 using Agilize.ConfigProvider.Domain.Aplicacao;
+using Agilize.HttpExceptions;
 
 namespace Agilize.ConfigProvider.Service;
 
@@ -45,5 +46,10 @@ public class AplicacaoService : IAplicacaoService
             aka,
             habilitado,
             vigenteEm);
+    }
+    
+    public async Task<IAplicacao> IncluirAplicacao(IAplicacao aplicacao)
+    {
+        throw new Http501NaoImplementadoException();
     }
 }

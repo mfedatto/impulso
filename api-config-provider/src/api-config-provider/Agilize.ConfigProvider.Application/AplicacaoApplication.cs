@@ -46,10 +46,9 @@ public class AplicacaoApplication : IAplicacaoApplication
             limit))
             .WrapUp(skip ?? 0, limit, total);
     }
-
-
+    
     public async Task<IAplicacao> IncluirAplicacao(IAplicacao aplicacao)
     {
-        throw new Http501NaoImplementadoException();
+        return await _service.IncluirAplicacao(aplicacao);
     }
 }

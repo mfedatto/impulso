@@ -8,7 +8,9 @@ public static class ModelExtensions
     {
         return new GetAplicacoesResponseModel
         {
-            AppId = aplicacao.AppId,
+            AppId = aplicacao.AppId == Guid.Empty
+                ? Guid.NewGuid()
+                : aplicacao.AppId,
             Nome = aplicacao.Nome,
             Sigla = aplicacao.Sigla,
             Aka = aplicacao.Aka,

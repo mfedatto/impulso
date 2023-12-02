@@ -18,4 +18,5 @@ public interface IAplicacaoService
         string? aka = null,
         bool? habilitado = null,
         DateTime? vigenteEm = null);
+    Task<IAplicacao> IncluirAplicacao(IAplicacao aplicacao);
 }
