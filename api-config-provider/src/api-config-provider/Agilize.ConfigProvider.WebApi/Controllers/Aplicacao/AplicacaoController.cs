@@ -6,7 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace Agilize.ConfigProvider.WebApi.Controllers.Aplicacao;
 
 [Route(RouteTemplate.Aplicacoes)]
-public class AplicacaoController : Controller
+[ApiController]
+public class AplicacaoController : ControllerBase
 {
     private readonly IAplicacaoApplication _application;
     

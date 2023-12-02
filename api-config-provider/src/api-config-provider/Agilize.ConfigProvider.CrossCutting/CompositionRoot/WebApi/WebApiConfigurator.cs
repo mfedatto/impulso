@@ -14,7 +14,10 @@ public class WebApiConfigurator : IApplicationConfigurator
             app.UseSwaggerUI();
         }
 
-        app.UseHttpsRedirection();
+        //app.UseHttpsRedirection();
+        
+        app.UseRouting();
+        app.UseMvc();
 
         return app;
     }
