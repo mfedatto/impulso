@@ -3,5 +3,6 @@ namespace Agilize.ConfigProvider.WebApi.Constants;
 public static class RouteTemplate
 {
     public const string Aplicacoes = "aplicacoes";
-    public const string AplicacoesGetIndex = "";
+    public const string AplicacoesGetAplicacoes = "";
+    public const string AplicacoesPostAplicacao = "";
 }

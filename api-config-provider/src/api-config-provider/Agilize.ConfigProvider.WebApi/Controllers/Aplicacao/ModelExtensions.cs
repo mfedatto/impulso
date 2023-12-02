@@ -4,9 +4,9 @@ namespace Agilize.ConfigProvider.WebApi.Controllers.Aplicacao;
 
 public static class ModelExtensions
 {
-    public static GetIndexResponseModel ToGetIndexResponseModel(this IAplicacao aplicacao)
+    public static GetAplicacoesResponseModel ToGetIndexResponseModel(this IAplicacao aplicacao)
     {
-        return new GetIndexResponseModel
+        return new GetAplicacoesResponseModel
         {
             AppId = aplicacao.AppId,
             Nome = aplicacao.Nome,

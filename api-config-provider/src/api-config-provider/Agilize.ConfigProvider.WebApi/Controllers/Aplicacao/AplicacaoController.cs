@@ -1,6 +1,7 @@
 using Agilize.ConfigProvider.Domain.Aplicacao;
 using Agilize.ConfigProvider.Domain.Wrappers;
 using Agilize.ConfigProvider.WebApi.Constants;
+using Agilize.HttpExceptions;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Agilize.ConfigProvider.WebApi.Controllers.Aplicacao;
@@ -15,8 +16,8 @@ public class AplicacaoController : Controller
         _application = application;
     }
     
-    [HttpGet(RouteTemplate.AplicacoesGetIndex)]
-    public async Task<ActionResult<PagedListWrapper<GetIndexResponseModel>>> Get_Index(
+    [HttpGet(RouteTemplate.AplicacoesGetAplicacoes)]
+    public async Task<ActionResult<PagedListWrapper<GetAplicacoesResponseModel>>> Get_Index(
         [FromQuery(Name = NameFromQuery.AppId)] string? appId = null,
         [FromQuery(Name = NameFromQuery.Nome)] string? nome = null,
         [FromQuery(Name = NameFromQuery.Sigla)] string? sigla = null,
@@ -35,5 +36,12 @@ public class AplicacaoController : Controller
             vigenteEm,
             skip,
             limit));
+    }
+    
+    [HttpPost(RouteTemplate.AplicacoesPostAplicacao)]
+    public async Task<ActionResult<PostAplicacaoResponseModel>> Post_Index(
+        [FromBody] PostAplicacaoRequestModel requestModel)
+    {
+        throw new Http501NaoImplementadoException();
     }
 }
