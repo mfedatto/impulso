@@ -1,6 +1,3 @@
-using NUnit.Framework;
-using System.Collections.Generic;
-using System.Linq;
 using Agilize.ConfigProvider.Domain.Wrappers;
 
 namespace Agilize.ConfigProvider.DomainTests;

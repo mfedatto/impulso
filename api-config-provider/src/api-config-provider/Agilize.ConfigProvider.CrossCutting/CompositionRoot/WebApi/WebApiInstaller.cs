@@ -1,4 +1,3 @@
-using Agilize.ConfigProvider.Domain.Aplicacao;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Agilize.ConfigProvider.CrossCutting.CompositionRoot.WebApi;

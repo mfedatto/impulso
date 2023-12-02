@@ -6,7 +6,7 @@ namespace Agilize.ConfigProvider.Infrastructure.MainDbContext;
 
 public class UnitOfWork : IUnitOfWork
 {
-    private IDbTransaction _transaction;
+    private IDbTransaction? _transaction;
 
     public IDbConnection DbConnection { get; }
 
@@ -30,17 +30,17 @@ public class UnitOfWork : IUnitOfWork
 
     public void Commit()
     {
-        _transaction.Commit();
+        _transaction?.Commit();
     }
 
     public void Rollback()
     {
-        _transaction.Rollback();
+        _transaction?.Rollback();
     }
 
     public void Dispose()
     {
         _transaction?.Dispose();
-        DbConnection?.Dispose();
+        DbConnection.Dispose();
     }
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-
 namespace Agilize.ConfigProvider.Domain.Wrappers;
 
 public struct PagedListWrapper<T>

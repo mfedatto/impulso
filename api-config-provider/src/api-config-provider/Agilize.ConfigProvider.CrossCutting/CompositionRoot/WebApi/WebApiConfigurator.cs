@@ -1,4 +1,3 @@
-using Agilize.HttpExceptions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Hosting;
 
