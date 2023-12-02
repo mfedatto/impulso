@@ -9,10 +9,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cccbea4b-1010-4ce6-b1c0-33862fc46385" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Controllers/Aplicacao/PostAplicacaoResponseModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApiTests/Agilize.ConfigProvider.WebApiTests.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApiTests/AplicacaoModelExtensionsTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApiTests/GlobalUsings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Agilize.ConfigProvider/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agilize.ConfigProvider/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Application/AplicacaoApplication.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Application/AplicacaoApplication.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Aplicacao/IAplicacaoApplication.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Aplicacao/IAplicacaoApplication.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Wrappers/PagedListWrapperExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Wrappers/PagedListWrapperExtensions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Controllers/Aplicacao/AplicacaoController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Controllers/Aplicacao/AplicacaoController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Controllers/Aplicacao/GetIndexResponseModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Controllers/Aplicacao/GetAplicacoesResponseModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Controllers/Aplicacao/ModelExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Controllers/Aplicacao/ModelExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,30 +67,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "ReSpellerSettingsId",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;ReSpellerSettingsId&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "/home/fedatto/.config/JetBrains/Rider2023.2/resharper-host/DecompilerCache",
-      "/home/fedatto/.config/JetBrains/Rider2023.2/resharper-host/SourcesCache",
-      "/home/fedatto/.local/share/Symbols/src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/home/fedatto/.config/JetBrains/Rider2023.2/resharper-host/DecompilerCache&quot;,
+      &quot;/home/fedatto/.config/JetBrains/Rider2023.2/resharper-host/SourcesCache&quot;,
+      &quot;/home/fedatto/.local/share/Symbols/src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Agilize.ConfigProvider.WebApi: http">
     <configuration name="Agilize.ConfigProvider.WebApi: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Agilize.ConfigProvider.WebApi.csproj" />
@@ -155,7 +161,8 @@
       <workItem from="1701434368113" duration="20510000" />
       <workItem from="1701459269203" duration="14803000" />
       <workItem from="1701480828325" duration="100000" />
-      <workItem from="1701480955407" duration="9042000" />
+      <workItem from="1701480955407" duration="9564000" />
+      <workItem from="1701536260402" duration="3713000" />
     </task>
     <servers />
   </component>

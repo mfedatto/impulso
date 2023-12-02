@@ -17,4 +17,16 @@ public static class PagedListWrapperExtensions
             count: count,
             payload: payload ?? Array.Empty<T>());
     }
+    
+    public static PagedListWrapper<T> Clone<T, TT>(
+        this PagedListWrapper<TT> wrapper, Func<TT, T>conversor)
+    {
+        return new PagedListWrapper<T>(
+            total: wrapper.Total,
+            skip: wrapper.Skip,
+            limit: wrapper.Limit,
+            count: wrapper.Count,
+            payload: wrapper.Payload
+                .Select(conversor));
+    }
 }

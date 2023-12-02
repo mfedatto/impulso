@@ -1,5 +1,6 @@
 using Agilize.ConfigProvider.Domain.Aplicacao;
 using Agilize.ConfigProvider.Domain.Wrappers;
+using Agilize.HttpExceptions;
 
 namespace Agilize.ConfigProvider.Application;
 
@@ -44,5 +45,11 @@ public class AplicacaoApplication : IAplicacaoApplication
             skip,
             limit))
             .WrapUp(skip ?? 0, limit, total);
+    }
+
+
+    public async Task<IAplicacao> IncluirAplicacao(IAplicacao aplicacao)
+    {
+        throw new Http501NaoImplementadoException();
     }
 }

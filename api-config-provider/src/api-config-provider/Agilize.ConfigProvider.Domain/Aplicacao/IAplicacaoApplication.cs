@@ -13,4 +13,5 @@ public interface IAplicacaoApplication
         DateTime? vigenteEm = null,
         int? skip = 0,
         int? limit = null);
+    Task<IAplicacao> IncluirAplicacao(IAplicacao aplicacao);
 }

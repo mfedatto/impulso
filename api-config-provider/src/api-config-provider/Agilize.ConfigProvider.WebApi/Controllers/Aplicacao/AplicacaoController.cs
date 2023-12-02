@@ -10,10 +10,14 @@ namespace Agilize.ConfigProvider.WebApi.Controllers.Aplicacao;
 public class AplicacaoController : Controller
 {
     private readonly IAplicacaoApplication _application;
-    
-    public AplicacaoController(IAplicacaoApplication application)
+    private readonly AplicacaoFactory _factory;
+
+    public AplicacaoController(
+        IAplicacaoApplication application,
+        AplicacaoFactory factory)
     {
         _application = application;
+        _factory = factory;
     }
     
     [HttpGet(RouteTemplate.AplicacoesGetAplicacoes)]
@@ -27,7 +31,7 @@ public class AplicacaoController : Controller
         [FromQuery(Name = NameFromQuery.Skip)] int? skip = 0,
         [FromQuery(Name = NameFromQuery.Limit)] int? limit = null)
     {
-        return Ok(await _application.ObterListaDeAplicacoes(
+        return Ok((await _application.ObterListaDeAplicacoes(
             appId,
             nome,
             sigla,
@@ -35,13 +39,16 @@ public class AplicacaoController : Controller
             habilitado,
             vigenteEm,
             skip,
-            limit));
+            limit))
+            .Clone(aplicacao => aplicacao.ToGetResponseModel()));
     }
     
     [HttpPost(RouteTemplate.AplicacoesPostAplicacao)]
     public async Task<ActionResult<PostAplicacaoResponseModel>> Post_Index(
         [FromBody] PostAplicacaoRequestModel requestModel)
     {
-        throw new Http501NaoImplementadoException();
+        return Ok((await _application.IncluirAplicacao(
+            _factory.ToEntity(requestModel)))
+            .ToPostResponseModel());
     }
 }

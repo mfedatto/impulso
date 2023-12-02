@@ -5,5 +5,8 @@
   &lt;PhysicalFolder Path="/home/fedatto/.nuget/packages/microsoft.aspnetcore.openapi/8.0.0" Loaded="True" /&gt;
 &lt;/AssemblyExplorer&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f621a565_002D0903_002D4d44_002Dbe65_002D229414fc1d47/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from PagedListWrapperExtensionsTests.cs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;ProjectFile&gt;C50B5426-EC7A-44A1-A59F-25427DD3DB91/f:PagedListWrapperExtensionsTests.cs&lt;/ProjectFile&gt;
+  &lt;Or&gt;
+    &lt;ProjectFile&gt;C50B5426-EC7A-44A1-A59F-25427DD3DB91/f:PagedListWrapperExtensionsTests.cs&lt;/ProjectFile&gt;
+    &lt;ProjectFile&gt;323175CF-9BA0-4759-A825-07B9459FB267/f:AplicacaoModelExtensionsTests.cs&lt;/ProjectFile&gt;
+  &lt;/Or&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
