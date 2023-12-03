@@ -4,8 +4,8 @@ namespace Agilize.ConfigProvider.Domain.Aplicacao;
 
 public interface IAplicacaoApplication
 {
-    Task<PagedListWrapper<IAplicacao>> ObterListaDeAplicacoes(
-        string? appId = null,
+    Task<PagedListWrapper<IAplicacao>> BuscarAplicacoes(
+        Guid? appId = null,
         string? nome = null,
         string? sigla = null,
         string? aka = null,
@@ -13,5 +13,5 @@ public interface IAplicacaoApplication
         DateTime? vigenteEm = null,
         int? skip = 0,
         int? limit = null);
-    Task<IAplicacao> IncluirAplicacao(IAplicacao aplicacao);
+    Task IncluirAplicacao(IAplicacao aplicacao);
 }

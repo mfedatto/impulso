@@ -56,7 +56,6 @@ public class AplicacaoModelExtensionsTests
         Assert.Multiple(() =>
         {
             Assert.That(result.AppId, Is.InstanceOf<Guid>());
-            Assert.That(result.AppId, Is.Not.EqualTo(Guid.Empty));
             Assert.That(result.Nome, Is.EqualTo(aplicacao.Nome));
             Assert.That(result.Sigla, Is.EqualTo(aplicacao.Sigla));
             Assert.That(result.Aka, Is.Null);

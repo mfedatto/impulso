@@ -1,5 +1,6 @@
 using Agilize.ConfigProvider.Domain.Aplicacao;
 using Agilize.ConfigProvider.Domain.MainDbContext;
+using Agilize.HttpExceptions;
 using Dapper;
 
 namespace Agilize.ConfigProvider.Infrastructure.MainDbContext.Repositories;
@@ -13,8 +14,8 @@ public class AplicacaoRepository : IAplicacaoRepository
         _uow = uow;
     }
     
-    public async Task<IEnumerable<IAplicacao>> ObterListaDeAplicacoes(
-        string? appId = null,
+    public async Task<IEnumerable<IAplicacao>> BuscarAplicacoes(
+        Guid? appId = null,
         string? nome = null,
         string? sigla = null,
         string? aka = null,
@@ -40,7 +41,7 @@ public class AplicacaoRepository : IAplicacaoRepository
             """,
             new
             {
-                p_AppId = appId,
+                p_AppId = appId ?? Guid.Empty,
                 p_Nome = nome,
                 p_Sigla = sigla,
                 p_Aka = aka,
@@ -51,8 +52,8 @@ public class AplicacaoRepository : IAplicacaoRepository
             });
     }
     
-    public async Task<int> ObterTotalDeAplicacoes(
-        string? appId = null,
+    public async Task<int> ContarAplicacoes(
+        Guid? appId = null,
         string? nome = null,
         string? sigla = null,
         string? aka = null,
@@ -61,26 +62,52 @@ public class AplicacaoRepository : IAplicacaoRepository
     {
         return await _uow.DbConnection.ExecuteScalarAsync<int>(
             """
-                SELECT *
-                FROM Aplicacoes
-                WHERE
-                    (@p_AppId = '00000000-0000-0000-0000-000000000000' OR AppId = @p_AppId::uuid) AND
-                    (@p_Nome IS NULL OR Nome = @p_Nome) AND
-                    (@p_Sigla IS NULL OR Sigla = @p_Sigla) AND
-                    (@p_Aka IS NULL OR Aka = @p_Aka) AND
-                    (@p_Habilitado IS NULL OR Habilitado = @p_Habilitado) AND
-                    (@p_VigenteEm IS NULL OR (VigenteDe IS NULL OR VigenteDe <= @p_VigenteEm::date) AND (VigenteAte IS NULL OR VigenteAte >= @p_VigenteEm::date))
-                ORDER BY Nome;
+            SELECT COUNT(*)
+            FROM Aplicacoes
+            WHERE
+                (@p_AppId = '00000000-0000-0000-0000-000000000000' OR AppId = @p_AppId::uuid) AND
+                (@p_Nome IS NULL OR Nome = @p_Nome) AND
+                (@p_Sigla IS NULL OR Sigla = @p_Sigla) AND
+                (@p_Aka IS NULL OR Aka = @p_Aka) AND
+                (@p_Habilitado IS NULL OR Habilitado = @p_Habilitado) AND
+                (@p_VigenteEm IS NULL OR (VigenteDe IS NULL OR VigenteDe <= @p_VigenteEm::date) AND (VigenteAte IS NULL OR VigenteAte >= @p_VigenteEm::date));
             """,
             new
             {
-                p_AppId = appId ?? Guid.Empty.ToString(),
+                p_AppId = appId ?? Guid.Empty,
                 p_Nome = nome,
                 p_Sigla = sigla,
                 p_Aka = aka,
                 p_Habilitado = habilitado,
                 p_VigenteEm = vigenteEm?.ToString("yyyy-MM-dd HH:mm:ss")
             });
+    }
+    
+    public async Task IncluirAplicacao(IAplicacao aplicacao)
+    {
+        await _uow.DbConnection.ExecuteAsync(
+            """
+            INSERT INTO Aplicacoes (AppId, Nome, Sigla, Aka, Habilitado, VigenteDe, VigenteAte)
+            VALUES (@AppId, @Nome, @Sigla, @Aka, @Habilitado, @VigenteDe, @VigenteAte)
+            """,
+            aplicacao);
+    }
+    
+    public async Task<IAplicacao?> BuscarAplicacao(
+        Guid appId)
+    {
+        return (await _uow.DbConnection.QueryAsync<Aplicacao>(
+            """
+                SELECT *
+                FROM Aplicacoes
+                WHERE
+                    @p_AppId::uuid;
+            """,
+            new
+            {
+                p_AppId = appId
+            }))
+            .SingleOrDefault<IAplicacao>();
     }
 }
 

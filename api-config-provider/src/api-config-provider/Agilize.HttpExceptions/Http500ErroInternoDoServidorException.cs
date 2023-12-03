@@ -8,4 +8,14 @@ public class Http500ErroInternoDoServidorException : Http5xxServerException
     {
         StatusCode = 500;
     }
+    
+    public Http500ErroInternoDoServidorException(Exception innerException) : base("HTTP 500 - Erro interno do servidor.", innerException)
+    {
+        StatusCode = 500;
+    }
+    
+    public Http500ErroInternoDoServidorException(string message, Exception innerException) : base(message, innerException)
+    {
+        StatusCode = 500;
+    }
 }

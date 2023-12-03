@@ -9,16 +9,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cccbea4b-1010-4ce6-b1c0-33862fc46385" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApiTests/Agilize.ConfigProvider.WebApiTests.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApiTests/AplicacaoModelExtensionsTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApiTests/GlobalUsings.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Exceptions/AplicacaoNaoEncontradaException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Exceptions/AppIdEmUsoException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Exceptions/MaisDeUmAplicacaoEncontradaException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Agilize.HttpExceptions/Http404NaoEncontradoException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Agilize.HttpExceptions/Http409ConflitoException.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Agilize.ConfigProvider/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agilize.ConfigProvider/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Application/AplicacaoApplication.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Application/AplicacaoApplication.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.CrossCutting/CompositionRoot/WebApplicationBuilderExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.CrossCutting/CompositionRoot/WebApplicationBuilderExtensions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Aplicacao/IAplicacaoApplication.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Aplicacao/IAplicacaoApplication.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Wrappers/PagedListWrapperExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Wrappers/PagedListWrapperExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Aplicacao/IAplicacaoRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Aplicacao/IAplicacaoRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Aplicacao/IAplicacaoService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Aplicacao/IAplicacaoService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Infrastructure/MainDbContext/Repositories/AplicacaoRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Infrastructure/MainDbContext/Repositories/AplicacaoRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Service/AplicacaoService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Service/AplicacaoService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Controllers/Aplicacao/AplicacaoController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Controllers/Aplicacao/AplicacaoController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Controllers/Aplicacao/ModelExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Controllers/Aplicacao/ModelExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApiTests/AplicacaoModelExtensionsTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApiTests/AplicacaoModelExtensionsTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.HttpExceptions/Http400RequisicaoInvalidaException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.HttpExceptions/Http400RequisicaoInvalidaException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.HttpExceptions/Http4xxClientException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.HttpExceptions/Http4xxClientException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.HttpExceptions/Http500ErroInternoDoServidorException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.HttpExceptions/Http500ErroInternoDoServidorException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.HttpExceptions/Http501NaoImplementadoException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.HttpExceptions/Http501NaoImplementadoException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.HttpExceptions/Http5xxServerException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.HttpExceptions/Http5xxServerException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.HttpExceptions/HttpException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.HttpExceptions/HttpException.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +56,8 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/13b31225b7ca3128b65956ad91d096cd6ec5cd5884c1801ee7c67e2b0ae/SwaggerBuilderExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3480484a9487a9e86082421e13728de7fe3b614a33b8b70d3c168334ae165/Single.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3f44c5b9eb6851301091fc65ce6dd6671e1a75f8a7f12837bc921ecf12ab/Exception.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/44cad551704bc7dae78cc7717b8b9f9313582aa8e67a6585a69de0cc33b4b8/IServiceCollection.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/484917e236e092d5ce76c5f373993d21fb07a86c2912aaaec5db139b77ac48/SwaggerGenServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/75a913e9a7f21ec51df825066a2374e58efe6284a9f27a94ad93a275eb2d98/WebApplicationBuilder.cs" root0="FORCE_HIGHLIGHTING" />
@@ -162,7 +176,8 @@
       <workItem from="1701459269203" duration="14803000" />
       <workItem from="1701480828325" duration="100000" />
       <workItem from="1701480955407" duration="9564000" />
-      <workItem from="1701536260402" duration="3713000" />
+      <workItem from="1701536260402" duration="9996000" />
+      <workItem from="1701595381408" duration="6208000" />
     </task>
     <servers />
   </component>

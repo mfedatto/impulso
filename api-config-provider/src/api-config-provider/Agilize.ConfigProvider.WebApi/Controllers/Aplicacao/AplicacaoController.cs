@@ -31,8 +31,8 @@ public class AplicacaoController : Controller
         [FromQuery(Name = NameFromQuery.Skip)] int? skip = 0,
         [FromQuery(Name = NameFromQuery.Limit)] int? limit = null)
     {
-        return Ok((await _application.ObterListaDeAplicacoes(
-            appId,
+        return Ok((await _application.BuscarAplicacoes(
+            appId is null ? null : Guid.Parse(appId),
             nome,
             sigla,
             aka,
@@ -47,8 +47,10 @@ public class AplicacaoController : Controller
     public async Task<ActionResult<PostAplicacaoResponseModel>> Post_Index(
         [FromBody] PostAplicacaoRequestModel requestModel)
     {
-        return Ok((await _application.IncluirAplicacao(
-            _factory.ToEntity(requestModel)))
-            .ToPostResponseModel());
+        IAplicacao aplicacao = _factory.ToEntity(requestModel);
+        
+        await _application.IncluirAplicacao(aplicacao);
+        
+        return Ok(aplicacao.ToPostResponseModel());
     }
 }

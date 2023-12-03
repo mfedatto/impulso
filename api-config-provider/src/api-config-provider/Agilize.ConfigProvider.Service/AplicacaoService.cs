@@ -1,4 +1,5 @@
 using Agilize.ConfigProvider.Domain.Aplicacao;
+using Agilize.ConfigProvider.Domain.Exceptions;
 using Agilize.HttpExceptions;
 
 namespace Agilize.ConfigProvider.Service;
@@ -12,8 +13,8 @@ public class AplicacaoService : IAplicacaoService
         _repository = repository;
     }
     
-    public async Task<IEnumerable<IAplicacao>> ObterListaDeAplicacoes(
-        string? appId = null,
+    public async Task<IEnumerable<IAplicacao>> BuscarAplicacoes(
+        Guid? appId = null,
         string? nome = null,
         string? sigla = null,
         string? aka = null,
@@ -22,7 +23,7 @@ public class AplicacaoService : IAplicacaoService
         int? skip = 0,
         int? limit = null)
     {
-        return await _repository.ObterListaDeAplicacoes(
+        return await _repository.BuscarAplicacoes(
             appId,
             nome,
             sigla,
@@ -31,15 +32,15 @@ public class AplicacaoService : IAplicacaoService
             vigenteEm);
     }
     
-    public async Task<int> ObterTotalDeAplicacoes(
-        string? appId = null,
+    public async Task<int> ContarAplicacoes(
+        Guid? appId = null,
         string? nome = null,
         string? sigla = null,
         string? aka = null,
         bool? habilitado = null,
         DateTime? vigenteEm = null)
     {
-        return await _repository.ObterTotalDeAplicacoes(
+        return await _repository.ContarAplicacoes(
             appId,
             nome,
             sigla,
@@ -48,8 +49,28 @@ public class AplicacaoService : IAplicacaoService
             vigenteEm);
     }
     
-    public async Task<IAplicacao> IncluirAplicacao(IAplicacao aplicacao)
+    public async Task IncluirAplicacao(IAplicacao aplicacao)
     {
-        throw new Http501NaoImplementadoException();
+        if (await _repository.BuscarAplicacao(aplicacao.AppId) is not null) throw new AppIdEmUsoException();
+        
+        await _repository.IncluirAplicacao(aplicacao);
+    }
+
+    public async Task<IAplicacao> BuscarAplicacao(Guid appId)
+    {
+        IAplicacao? result;
+        
+        try
+        {
+            result =  await _repository.BuscarAplicacao(appId);
+            
+            if (result is null) throw new AplicacaoNaoEncontradaException();
+        }
+        catch (InvalidOperationException ex)
+        {
+            throw new MaisDeUmAplicacaoEncontradaException(ex);
+        }
+
+        return result;
     }
 }

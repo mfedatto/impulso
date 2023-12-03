@@ -13,8 +13,8 @@ public class AplicacaoApplication : IAplicacaoApplication
         _service = service;
     }
     
-    public async Task<PagedListWrapper<IAplicacao>> ObterListaDeAplicacoes(
-        string? appId = null,
+    public async Task<PagedListWrapper<IAplicacao>> BuscarAplicacoes(
+        Guid? appId = null,
         string? nome = null,
         string? sigla = null,
         string? aka = null,
@@ -23,7 +23,7 @@ public class AplicacaoApplication : IAplicacaoApplication
         int? skip = 0,
         int? limit = null)
     {
-        int total = await _service.ObterTotalDeAplicacoes(
+        int total = await _service.ContarAplicacoes(
             appId,
             nome,
             sigla,
@@ -35,7 +35,7 @@ public class AplicacaoApplication : IAplicacaoApplication
             return Enumerable.Empty<IAplicacao>()
                 .WrapUp();
         
-        return (await _service.ObterListaDeAplicacoes(
+        return (await _service.BuscarAplicacoes(
             appId,
             nome,
             sigla,
@@ -47,8 +47,8 @@ public class AplicacaoApplication : IAplicacaoApplication
             .WrapUp(skip ?? 0, limit, total);
     }
     
-    public async Task<IAplicacao> IncluirAplicacao(IAplicacao aplicacao)
+    public async Task IncluirAplicacao(IAplicacao aplicacao)
     {
-        return await _service.IncluirAplicacao(aplicacao);
+        await _service.IncluirAplicacao(aplicacao);
     }
 }

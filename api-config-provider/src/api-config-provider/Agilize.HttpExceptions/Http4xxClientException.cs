@@ -8,4 +8,14 @@ public class Http4xxClientException : HttpException
     {
         StatusCode = 400;
     }
+    
+    public Http4xxClientException(Exception innerException) : base("HTTP 400 - Bad Request.", innerException)
+    {
+        StatusCode = 400;
+    }
+    
+    public Http4xxClientException(string message, Exception innerException) : base(message, innerException)
+    {
+        StatusCode = 400;
+    }
 }

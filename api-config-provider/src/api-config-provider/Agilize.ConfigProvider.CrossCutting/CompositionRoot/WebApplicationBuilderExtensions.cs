@@ -1,4 +1,5 @@
 using Agilize.ConfigProvider.CrossCutting.CompositionRoot.Application;
+using Agilize.ConfigProvider.CrossCutting.CompositionRoot.Domain;
 using Agilize.ConfigProvider.CrossCutting.CompositionRoot.Infrastructure;
 using Agilize.ConfigProvider.CrossCutting.CompositionRoot.Service;
 using Agilize.ConfigProvider.CrossCutting.CompositionRoot.WebApi;
@@ -23,6 +24,7 @@ public static class WebApplicationBuilderExtensions
             .InstallServices<InfrastructureInstaller>()
             .InstallServices<ServiceInstaller>()
             .InstallServices<ApplicationInstaller>()
+            .InstallServices<DomainInstaller>()
             .InstallServices<WebApiInstaller>();
         
         return builder;
