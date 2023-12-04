@@ -4,7 +4,9 @@ namespace Agilize.ConfigProvider.Domain.Exceptions;
 
 public class AplicacaoNaoEncontradaException : Http404NaoEncontradoException
 {
-    public AplicacaoNaoEncontradaException() : base("Aplicação não encontrada.") { }
+    private const string HttpExceptionMessage = "Aplicação não encontrada.";
+
+    public AplicacaoNaoEncontradaException() : base(HttpExceptionMessage) { }
     
-    public AplicacaoNaoEncontradaException(Exception innerException) : base("Aplicação não encontrada.", innerException) { }
+    public AplicacaoNaoEncontradaException(Exception innerException) : base(HttpExceptionMessage, innerException) { }
 }

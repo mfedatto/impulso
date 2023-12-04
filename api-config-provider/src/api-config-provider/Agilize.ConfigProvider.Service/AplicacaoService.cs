@@ -52,6 +52,7 @@ public class AplicacaoService : IAplicacaoService
     public async Task IncluirAplicacao(IAplicacao aplicacao)
     {
         if (await _repository.BuscarAplicacao(aplicacao.AppId) is not null) throw new AppIdEmUsoException();
+        if ((await _repository.BuscarAplicacoes(nome: aplicacao.Nome)).Any()) throw new AppIdEmUsoException();
         
         await _repository.IncluirAplicacao(aplicacao);
     }

@@ -64,6 +64,64 @@ public class AplicacaoModelExtensionsTests
             Assert.That(result.VigenteAte, Is.EqualTo(aplicacao.VigenteAte));
         });
     }
+    
+    [Test]
+    public void ToEntity_RequestModelCompleto_DeveMapearCorretamente()
+    {
+        // Arrange
+        var factory = new AplicacaoFactory();
+        var requestModel = new PostAplicacaoRequestModel
+        {
+            AppId = Guid.NewGuid(),
+            Nome = "TesteApp",
+            Sigla = "TA",
+            Aka = "AppAlias",
+            Habilitado = true,
+            VigenteDe = DateTime.Now,
+            VigenteAte = DateTime.Now.AddYears(1)
+        };
+
+        // Act
+        IAplicacao result = factory.ToEntity(requestModel);
+
+        // Assert
+        Assert.Multiple(() =>
+        {
+            Assert.That(result, Is.Not.Null);
+            Assert.That(requestModel.AppId ?? result.AppId, Is.EqualTo(result.AppId));
+            Assert.That(requestModel.Nome, Is.EqualTo(result.Nome));
+            Assert.That(requestModel.Sigla, Is.EqualTo(result.Sigla));
+            Assert.That(requestModel.Aka, Is.EqualTo(result.Aka));
+            Assert.That(requestModel.Habilitado, Is.EqualTo(result.Habilitado));
+            Assert.That(requestModel.VigenteDe, Is.EqualTo(result.VigenteDe));
+            Assert.That(requestModel.VigenteAte, Is.EqualTo(result.VigenteAte));
+        });
+    }
+
+    [Test]
+    public void ToEntity_RequestModelSemAppId_DeveGerarEntidadeComNovoAppId()
+    {
+        // Arrange
+        var factory = new AplicacaoFactory();
+        var requestModel = new PostAplicacaoRequestModel
+        {
+            Nome = "TesteApp",
+            Sigla = "TA",
+            Habilitado = true,
+            VigenteDe = DateTime.Now,
+            VigenteAte = DateTime.Now.AddYears(1)
+        };
+
+        // Act
+        IAplicacao result = factory.ToEntity(requestModel);
+
+        // Assert
+        Assert.Multiple(() =>
+        {
+            Assert.That(result, Is.Not.Null);
+            Assert.That(result.AppId, Is.Not.EqualTo(Guid.Empty));
+        });
+    }
 }
 
 file record Aplicacao : IAplicacao

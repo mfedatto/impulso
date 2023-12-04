@@ -101,7 +101,7 @@ public class AplicacaoRepository : IAplicacaoRepository
                 SELECT *
                 FROM Aplicacoes
                 WHERE
-                    @p_AppId::uuid;
+                    AppId = @p_AppId::uuid;
             """,
             new
             {

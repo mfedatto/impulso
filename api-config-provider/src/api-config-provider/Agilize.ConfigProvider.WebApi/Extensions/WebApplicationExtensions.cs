@@ -7,7 +7,7 @@ public static class WebApplicationExtensions
 {
     public static WebApplication Configure(this WebApplication app)
     {
-        return (WebApplication)app.ConfigureApp()
-            .UseMiddleware<HttpContextMiddleware>();
+        return ((WebApplication)app.UseMiddleware<HttpContextMiddleware>())
+            .ConfigureApp();
     }
 }
