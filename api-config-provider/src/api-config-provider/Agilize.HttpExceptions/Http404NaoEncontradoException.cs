@@ -2,21 +2,24 @@ namespace Agilize.HttpExceptions;
 
 public class Http404NaoEncontradoException : Http4xxClientException
 {
-    public Http404NaoEncontradoException() : this("HTTP 404 - Não encontrado.") { }
+    private const string HttpExceptionMessage = "HTTP 404 - Não encontrado.";
+    private const int HttpExceptionStatusCode = 404;
+
+    public Http404NaoEncontradoException() : this(HttpExceptionMessage) { }
     
     public Http404NaoEncontradoException(string message) : base(message)
     {
-        StatusCode = 404;
+        StatusCode = HttpExceptionStatusCode;
     }
     
-    public Http404NaoEncontradoException(Exception innerException) : base("HTTP 404 - Não encontrado.", innerException)
+    public Http404NaoEncontradoException(Exception innerException) : base(HttpExceptionMessage, innerException)
     {
-        StatusCode = 404;
+        StatusCode = HttpExceptionStatusCode;
     }
     
     public Http404NaoEncontradoException(string message, Exception innerException) : base(message, innerException)
     {
-        StatusCode = 404;
+        StatusCode = HttpExceptionStatusCode;
     }
 
 }

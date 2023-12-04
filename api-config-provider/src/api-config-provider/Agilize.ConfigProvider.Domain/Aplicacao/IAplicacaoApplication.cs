@@ -14,4 +14,7 @@ public interface IAplicacaoApplication
         int? skip = 0,
         int? limit = null);
     Task IncluirAplicacao(IAplicacao aplicacao);
+    Task<IAplicacao> BuscarAplicacaoPorId(Guid appId);
+    Task AtualizarAplicacao(IAplicacao aplicacao);
+    Task ExcluirAplicacao(Guid appId);
 }

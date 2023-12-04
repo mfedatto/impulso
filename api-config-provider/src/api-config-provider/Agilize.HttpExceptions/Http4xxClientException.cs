@@ -2,20 +2,23 @@ namespace Agilize.HttpExceptions;
 
 public class Http4xxClientException : HttpException
 {
-    public Http4xxClientException() : this("HTTP 400 - Bad Request.") { }
+    private const string HttpExceptionMessage = "HTTP 400 - Bad Request.";
+    private const int HttpExceptionStatusCode = 400;
+
+    public Http4xxClientException() : this(HttpExceptionMessage) { }
 
     public Http4xxClientException(string message) : base(message)
     {
-        StatusCode = 400;
+        StatusCode = HttpExceptionStatusCode;
     }
     
-    public Http4xxClientException(Exception innerException) : base("HTTP 400 - Bad Request.", innerException)
+    public Http4xxClientException(Exception innerException) : base(HttpExceptionMessage, innerException)
     {
-        StatusCode = 400;
+        StatusCode = HttpExceptionStatusCode;
     }
     
     public Http4xxClientException(string message, Exception innerException) : base(message, innerException)
     {
-        StatusCode = 400;
+        StatusCode = HttpExceptionStatusCode;
     }
 }

@@ -1,4 +1,5 @@
 using Agilize.ConfigProvider.Domain.Aplicacao;
+using Agilize.ConfigProvider.Domain.Exceptions;
 using Agilize.ConfigProvider.Domain.Wrappers;
 using Agilize.HttpExceptions;
 
@@ -50,5 +51,26 @@ public class AplicacaoApplication : IAplicacaoApplication
     public async Task IncluirAplicacao(IAplicacao aplicacao)
     {
         await _service.IncluirAplicacao(aplicacao);
+    }
+    
+    public async Task<IAplicacao> BuscarAplicacaoPorId(Guid appId)
+    {
+        return await _service.BuscarAplicacaoPorId(appId);
+    }
+    
+    public async Task AtualizarAplicacao(IAplicacao aplicacao)
+    {
+        if ((await _service.BuscarAplicacaoPorId(aplicacao.AppId)) is null)
+            throw new AplicacaoNaoEncontradaException();
+
+        await _service.AtualizarAplicacao(aplicacao);
+    }
+    
+    public async Task ExcluirAplicacao(Guid appId)
+    {
+        if ((await _service.BuscarAplicacaoPorId(appId)) is null)
+            throw new AplicacaoNaoEncontradaException();
+
+        await _service.ExcluirAplicacao(appId);
     }
 }

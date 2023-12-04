@@ -19,5 +19,7 @@ public interface IAplicacaoService
         bool? habilitado = null,
         DateTime? vigenteEm = null);
     Task IncluirAplicacao(IAplicacao aplicacao);
-    Task<IAplicacao> BuscarAplicacao(Guid appId);
+    Task<IAplicacao> BuscarAplicacaoPorId(Guid appId);
+    Task AtualizarAplicacao(IAplicacao aplicacao);
+    Task ExcluirAplicacao(Guid appId);
 }

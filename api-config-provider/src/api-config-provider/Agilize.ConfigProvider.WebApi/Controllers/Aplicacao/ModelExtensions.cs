@@ -4,9 +4,9 @@ namespace Agilize.ConfigProvider.WebApi.Controllers.Aplicacao;
 
 public static class ModelExtensions
 {
-    public static GetAplicacoesResponseModel ToGetResponseModel(this IAplicacao aplicacao)
+    public static GetAplicacaoResponseModel ToGetResponseModel(this IAplicacao aplicacao)
     {
-        return new GetAplicacoesResponseModel
+        return new GetAplicacaoResponseModel
         {
             AppId = aplicacao.AppId,
             Nome = aplicacao.Nome,
@@ -42,5 +42,17 @@ public static class ModelExtensions
             VigenteDe = aplicacao.VigenteDe,
             VigenteAte = aplicacao.VigenteAte
         };
+    }
+    
+    public static IAplicacao ToEntity(this AplicacaoFactory factory, PutAplicacaoRequestModel requestModel, Guid appId)
+    {
+        return factory.Create(
+            appId,
+            requestModel.Nome,
+            requestModel.Sigla,
+            requestModel.Aka,
+            requestModel.Habilitado,
+            requestModel.VigenteDe,
+            requestModel.VigenteAte);
     }
 }

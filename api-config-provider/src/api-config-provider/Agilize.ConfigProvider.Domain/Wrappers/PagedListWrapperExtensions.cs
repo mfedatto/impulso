@@ -18,7 +18,7 @@ public static class PagedListWrapperExtensions
             payload: payload ?? Array.Empty<T>());
     }
     
-    public static PagedListWrapper<T> Clone<T, TT>(
+    public static PagedListWrapper<T> Map<T, TT>(
         this PagedListWrapper<TT> wrapper, Func<TT, T>conversor)
     {
         return new PagedListWrapper<T>(

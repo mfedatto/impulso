@@ -1,8 +1,7 @@
 namespace Agilize.ConfigProvider.WebApi.Controllers.Aplicacao;
 
-public struct GetAplicacoesResponseModel
+public struct PutAplicacaoRequestModel
 {
-    public Guid AppId { get; init; }
     public required string Nome { get; init; }
     public required string Sigla { get; init; }
     public string? Aka { get; init; }

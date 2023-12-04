@@ -1,5 +1,6 @@
 using Agilize.ConfigProvider.Domain.Aplicacao;
 using Agilize.ConfigProvider.Domain.MainDbContext;
+using Agilize.ConfigProvider.Domain.Tipo;
 using Agilize.ConfigProvider.Infrastructure.MainDbContext;
 using Agilize.ConfigProvider.Infrastructure.MainDbContext.Repositories;
 using Microsoft.Extensions.DependencyInjection;
@@ -12,5 +13,6 @@ public class InfrastructureInstaller : IServiceInstaller
     {
         services.AddScoped<IUnitOfWork, UnitOfWork>();
         services.AddScoped<IAplicacaoRepository, AplicacaoRepository>();
+        services.AddScoped<ITipoRepository, TipoRepository>();
     }
 }

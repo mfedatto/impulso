@@ -51,27 +51,44 @@ public class AplicacaoService : IAplicacaoService
     
     public async Task IncluirAplicacao(IAplicacao aplicacao)
     {
-        if (await _repository.BuscarAplicacao(aplicacao.AppId) is not null) throw new AppIdEmUsoException();
-        if ((await _repository.BuscarAplicacoes(nome: aplicacao.Nome)).Any()) throw new AppIdEmUsoException();
+        if ((await _repository.BuscarAplicacaoPorId(aplicacao.AppId)) is not null) throw new AppIdEmUsoException();
+        if ((await _repository.BuscarAplicacaoPorNome(aplicacao.Nome)) is not null) throw new NomeDeAplicacaoEmUsoException();
+        if ((await _repository.BuscarAplicacaoPorSigla(aplicacao.Sigla)) is not null) throw new SiglaDeAplicacaoEmUsoException();
         
         await _repository.IncluirAplicacao(aplicacao);
     }
 
-    public async Task<IAplicacao> BuscarAplicacao(Guid appId)
+    public async Task<IAplicacao> BuscarAplicacaoPorId(Guid appId)
     {
         IAplicacao? result;
         
         try
         {
-            result =  await _repository.BuscarAplicacao(appId);
+            result =  await _repository.BuscarAplicacaoPorId(appId);
             
             if (result is null) throw new AplicacaoNaoEncontradaException();
         }
         catch (InvalidOperationException ex)
         {
-            throw new MaisDeUmAplicacaoEncontradaException(ex);
+            throw new MaisDeUmaAplicacaoEncontradaException(ex);
         }
 
         return result;
+    }
+    
+    public async Task AtualizarAplicacao(IAplicacao aplicacao)
+    {
+        if ((await _repository.BuscarAplicacaoPorId(aplicacao.AppId)) is null)
+            throw new AplicacaoNaoEncontradaException();
+
+        await _repository.AtualizarAplicacao(aplicacao);
+    }
+    
+    public async Task ExcluirAplicacao(Guid appId)
+    {
+        if ((await _repository.BuscarAplicacaoPorId(appId)) is null)
+            throw new AplicacaoNaoEncontradaException();
+
+        await _repository.ExcluirAplicacao(appId);
     }
 }

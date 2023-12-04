@@ -1,4 +1,5 @@
 using Agilize.ConfigProvider.Domain.Aplicacao;
+using Agilize.ConfigProvider.Domain.Exceptions;
 using Agilize.ConfigProvider.Domain.Wrappers;
 using Agilize.ConfigProvider.WebApi.Constants;
 using Agilize.HttpExceptions;
@@ -6,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Agilize.ConfigProvider.WebApi.Controllers.Aplicacao;
 
-[Route(RouteTemplate.Aplicacoes)]
+[Route(Rotas.Aplicacoes)]
 public class AplicacaoController : Controller
 {
     private readonly IAplicacaoApplication _application;
@@ -20,16 +21,16 @@ public class AplicacaoController : Controller
         _factory = factory;
     }
     
-    [HttpGet(RouteTemplate.AplicacoesGetAplicacoes)]
-    public async Task<ActionResult<PagedListWrapper<GetAplicacoesResponseModel>>> Get_Index(
-        [FromQuery(Name = NameFromQuery.AppId)] string? appId = null,
-        [FromQuery(Name = NameFromQuery.Nome)] string? nome = null,
-        [FromQuery(Name = NameFromQuery.Sigla)] string? sigla = null,
-        [FromQuery(Name = NameFromQuery.Aka)] string? aka = null,
-        [FromQuery(Name = NameFromQuery.Habilitado)] bool? habilitado = null,
-        [FromQuery(Name = NameFromQuery.VigenteEm)] DateTime? vigenteEm = null,
-        [FromQuery(Name = NameFromQuery.Skip)] int? skip = 0,
-        [FromQuery(Name = NameFromQuery.Limit)] int? limit = null)
+    [HttpGet(Rotas.AplicacoesGetAplicacoes)]
+    public async Task<ActionResult<PagedListWrapper<GetAplicacaoResponseModel>>> Get_Index(
+        [FromQuery(Name = ArgumentosNomeados.AppId)] string? appId = null,
+        [FromQuery(Name = ArgumentosNomeados.Nome)] string? nome = null,
+        [FromQuery(Name = ArgumentosNomeados.Sigla)] string? sigla = null,
+        [FromQuery(Name = ArgumentosNomeados.Aka)] string? aka = null,
+        [FromQuery(Name = ArgumentosNomeados.Habilitado)] bool? habilitado = null,
+        [FromQuery(Name = ArgumentosNomeados.VigenteEm)] DateTime? vigenteEm = null,
+        [FromQuery(Name = ArgumentosNomeados.Skip)] int? skip = 0,
+        [FromQuery(Name = ArgumentosNomeados.Limit)] int? limit = null)
     {
         return Ok((await _application.BuscarAplicacoes(
             appId is null ? null : Guid.Parse(appId),
@@ -40,10 +41,10 @@ public class AplicacaoController : Controller
             vigenteEm,
             skip,
             limit))
-            .Clone(aplicacao => aplicacao.ToGetResponseModel()));
+            .Map(aplicacao => aplicacao.ToGetResponseModel()));
     }
     
-    [HttpPost(RouteTemplate.AplicacoesPostAplicacao)]
+    [HttpPost(Rotas.AplicacoesPostAplicacao)]
     public async Task<ActionResult<PostAplicacaoResponseModel>> Post_Index(
         [FromBody] PostAplicacaoRequestModel requestModel)
     {
@@ -52,5 +53,50 @@ public class AplicacaoController : Controller
         await _application.IncluirAplicacao(aplicacao);
         
         return Ok(aplicacao.ToPostResponseModel());
+    }
+    
+    [HttpGet(Rotas.AplicacoesGetAplicacao)]
+    public async Task<ActionResult<GetAplicacaoResponseModel>> Get_ById(
+        [FromRoute(Name = ArgumentosNomeados.AppId)] Guid appId)
+    {
+        return Ok((await _application.BuscarAplicacaoPorId(appId))
+            .ToGetResponseModel());
+    }
+    
+    [HttpPut(Rotas.AplicacoesPutAplicacao)]
+    public async Task<ActionResult> Put_ById(
+        [FromRoute(Name = ArgumentosNomeados.AppId)] Guid appId,
+        [FromBody] PutAplicacaoRequestModel requestModel)
+    {
+        if ((await _application.BuscarAplicacaoPorId(appId).ConfigureAwait(false)) is null)
+            throw new AplicacaoNaoEncontradaException();
+        
+        IAplicacao aplicacao = _factory.ToEntity(requestModel, appId);
+        
+        await _application.AtualizarAplicacao(aplicacao);
+        
+        return Ok();
+    }
+    
+    [HttpDelete(Rotas.AplicacoesDeleteAplicacao)]
+    public async Task<ActionResult> Delete_ById(
+        [FromRoute(Name = ArgumentosNomeados.AppId)] Guid appId)
+    {
+        if ((await _application.BuscarAplicacaoPorId(appId).ConfigureAwait(false)) is null)
+            throw new AplicacaoNaoEncontradaException();
+        
+        await _application.ExcluirAplicacao(appId);
+        
+        return Ok();
+    }
+    
+    [HttpHead(Rotas.AplicacoesHeadAplicacao)]
+    public async Task<ActionResult> Head_ById(
+        [FromRoute(Name = ArgumentosNomeados.AppId)] Guid appId)
+    {
+        if ((await _application.BuscarAplicacaoPorId(appId).ConfigureAwait(false)) is null)
+            throw new AplicacaoNaoEncontradaException();
+        
+        return Ok();
     }
 }

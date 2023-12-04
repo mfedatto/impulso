@@ -2,21 +2,24 @@ namespace Agilize.HttpExceptions;
 
 public class Http409ConflitoException : Http4xxClientException
 {
-    public Http409ConflitoException() : this("HTTP 409 - Conflito.") { }
+    private const string HttpExceptionMessage = "HTTP 409 - Conflito.";
+    private const int HttpExceptionStatusCode = 409;
+
+    public Http409ConflitoException() : this(HttpExceptionMessage) { }
     
     public Http409ConflitoException(string message) : base(message)
     {
-        StatusCode = 409;
+        StatusCode = HttpExceptionStatusCode;
     }
     
-    public Http409ConflitoException(Exception innerException) : base("HTTP 409 - Conflito.", innerException)
+    public Http409ConflitoException(Exception innerException) : base(HttpExceptionMessage, innerException)
     {
-        StatusCode = 409;
+        StatusCode = HttpExceptionStatusCode;
     }
     
     public Http409ConflitoException(string message, Exception innerException) : base(message, innerException)
     {
-        StatusCode = 409;
+        StatusCode = HttpExceptionStatusCode;
     }
 
 }

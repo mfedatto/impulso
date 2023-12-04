@@ -21,7 +21,7 @@ public class AplicacaoModelExtensionsTests
         };
 
         // Act
-        GetAplicacoesResponseModel result = aplicacao.ToGetResponseModel();
+        GetAplicacaoResponseModel result = aplicacao.ToGetResponseModel();
 
         // Assert
         Assert.Multiple(() =>
@@ -50,7 +50,7 @@ public class AplicacaoModelExtensionsTests
         };
 
         // Act
-        GetAplicacoesResponseModel result = aplicacao.ToGetResponseModel();
+        GetAplicacaoResponseModel result = aplicacao.ToGetResponseModel();
 
         // Assert
         Assert.Multiple(() =>

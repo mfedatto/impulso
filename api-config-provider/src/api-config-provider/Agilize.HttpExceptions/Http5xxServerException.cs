@@ -2,20 +2,23 @@ namespace Agilize.HttpExceptions;
 
 public class Http5xxServerException : HttpException
 {
-    public Http5xxServerException() : this("HTTP 500 - Server error.") { }
+    private const string HttpExceptionMessage = "HTTP 500 - Server error.";
+    private const int HttpExceptionStatusCode = 500;
+
+    public Http5xxServerException() : this(HttpExceptionMessage) { }
 
     public Http5xxServerException(string message) : base(message)
     {
-        StatusCode = 500;
+        StatusCode = HttpExceptionStatusCode;
     }
     
-    protected Http5xxServerException(Exception innerException) : base("HTTP 500 - Server error.", innerException)
+    protected Http5xxServerException(Exception innerException) : base(HttpExceptionMessage, innerException)
     {
-        StatusCode = 500;
+        StatusCode = HttpExceptionStatusCode;
     }
     
     public Http5xxServerException(string message, Exception innerException) : base(message, innerException)
     {
-        StatusCode = 500;
+        StatusCode = HttpExceptionStatusCode;
     }
 }
