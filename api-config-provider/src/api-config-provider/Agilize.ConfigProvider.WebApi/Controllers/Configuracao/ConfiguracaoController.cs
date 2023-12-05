@@ -29,6 +29,8 @@ public class ConfiguracaoController : Controller
         [FromQuery(Name = ArgumentosNomeados.Limit)] int? limit = null)
     {
         if (!vigenteEm.HasValue) throw new DataDeVigenciaNaoInformadaException();
+
+        Response.Headers.Append(CabecalhosNomeados.Competencia, vigenteEm.Value.ToString("yyyy-MM-dd"));
         
         return Ok((await _application.BuscarConfiguracoes(
                 appId,

@@ -23,7 +23,6 @@ public class AplicacaoController : Controller
     
     [HttpGet(Rotas.AplicacoesGetAplicacoes)]
     public async Task<ActionResult<PagedListWrapper<GetAplicacaoResponseModel>>> Get_Index(
-        [FromQuery(Name = ArgumentosNomeados.AppId)] string? appId = null,
         [FromQuery(Name = ArgumentosNomeados.Nome)] string? nome = null,
         [FromQuery(Name = ArgumentosNomeados.Sigla)] string? sigla = null,
         [FromQuery(Name = ArgumentosNomeados.Aka)] string? aka = null,
@@ -32,8 +31,12 @@ public class AplicacaoController : Controller
         [FromQuery(Name = ArgumentosNomeados.Skip)] int? skip = 0,
         [FromQuery(Name = ArgumentosNomeados.Limit)] int? limit = null)
     {
+        if (vigenteEm.HasValue)
+        {
+            Response.Headers.Append(CabecalhosNomeados.Competencia, vigenteEm.Value.ToString("yyyy-MM-dd"));
+        }
+
         return Ok((await _application.BuscarAplicacoes(
-            appId is null ? null : Guid.Parse(appId),
             nome,
             sigla,
             aka,

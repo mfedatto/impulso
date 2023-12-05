@@ -15,7 +15,6 @@ public class AplicacaoRepository : IAplicacaoRepository
     }
 
     public async Task<IEnumerable<IAplicacao>> BuscarAplicacoes(
-        Guid? appId = null,
         string? nome = null,
         string? sigla = null,
         string? aka = null,
@@ -29,7 +28,6 @@ public class AplicacaoRepository : IAplicacaoRepository
             SELECT *
             FROM Aplicacoes
             WHERE
-                (@p_AppId = '00000000-0000-0000-0000-000000000000' OR AppId = @p_AppId::uuid) AND
                 (@p_Nome IS NULL OR LOWER(Nome) ~ @p_Nome) AND
                 (@p_Sigla IS NULL OR LOWER(Sigla) ~ @p_Sigla) AND
                 (@p_Aka IS NULL OR LOWER(Aka) ~ @p_Aka) AND
@@ -41,7 +39,6 @@ public class AplicacaoRepository : IAplicacaoRepository
             """,
             new
             {
-                p_AppId = appId ?? Guid.Empty,
                 p_Nome = nome?.ToLower(),
                 p_Sigla = sigla?.ToLower(),
                 p_Aka = aka?.ToLower(),
@@ -53,7 +50,6 @@ public class AplicacaoRepository : IAplicacaoRepository
     }
 
     public async Task<int> ContarAplicacoes(
-        Guid? appId = null,
         string? nome = null,
         string? sigla = null,
         string? aka = null,
@@ -65,7 +61,6 @@ public class AplicacaoRepository : IAplicacaoRepository
             SELECT COUNT(*)
             FROM Aplicacoes
             WHERE
-                (@p_AppId = '00000000-0000-0000-0000-000000000000' OR AppId = @p_AppId::uuid) AND
                 (@p_Nome IS NULL OR LOWER(Nome) ~ @p_Nome) AND
                 (@p_Sigla IS NULL OR LOWER(Sigla) ~ @p_Sigla) AND
                 (@p_Aka IS NULL OR LOWER(Aka) ~ @p_Aka) AND
@@ -74,7 +69,6 @@ public class AplicacaoRepository : IAplicacaoRepository
             """,
             new
             {
-                p_AppId = appId ?? Guid.Empty,
                 p_Nome = nome?.ToLower(),
                 p_Sigla = sigla?.ToLower(),
                 p_Aka = aka?.ToLower(),

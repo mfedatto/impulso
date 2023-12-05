@@ -14,7 +14,6 @@ public class AplicacaoService : IAplicacaoService
     }
     
     public async Task<IEnumerable<IAplicacao>> BuscarAplicacoes(
-        Guid? appId = null,
         string? nome = null,
         string? sigla = null,
         string? aka = null,
@@ -24,7 +23,6 @@ public class AplicacaoService : IAplicacaoService
         int? limit = null)
     {
         return await _repository.BuscarAplicacoes(
-            appId,
             nome,
             sigla,
             aka,
@@ -33,7 +31,6 @@ public class AplicacaoService : IAplicacaoService
     }
     
     public async Task<int> ContarAplicacoes(
-        Guid? appId = null,
         string? nome = null,
         string? sigla = null,
         string? aka = null,
@@ -41,7 +38,6 @@ public class AplicacaoService : IAplicacaoService
         DateTime? vigenteEm = null)
     {
         return await _repository.ContarAplicacoes(
-            appId,
             nome,
             sigla,
             aka,

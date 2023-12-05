@@ -5,7 +5,6 @@ namespace Agilize.ConfigProvider.Domain.Aplicacao;
 public interface IAplicacaoApplication
 {
     Task<PagedListWrapper<IAplicacao>> BuscarAplicacoes(
-        Guid? appId = null,
         string? nome = null,
         string? sigla = null,
         string? aka = null,

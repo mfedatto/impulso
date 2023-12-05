@@ -3,7 +3,6 @@ namespace Agilize.ConfigProvider.Domain.Aplicacao;
 public interface IAplicacaoService
 {
     Task<IEnumerable<IAplicacao>> BuscarAplicacoes(
-        Guid? appId = null,
         string? nome = null,
         string? sigla = null,
         string? aka = null,
@@ -12,7 +11,6 @@ public interface IAplicacaoService
         int? skip = 0,
         int? limit = null);
     Task<int> ContarAplicacoes(
-        Guid? appId = null,
         string? nome = null,
         string? sigla = null,
         string? aka = null,

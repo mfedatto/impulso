@@ -15,7 +15,6 @@ public class AplicacaoApplication : IAplicacaoApplication
     }
     
     public async Task<PagedListWrapper<IAplicacao>> BuscarAplicacoes(
-        Guid? appId = null,
         string? nome = null,
         string? sigla = null,
         string? aka = null,
@@ -25,7 +24,6 @@ public class AplicacaoApplication : IAplicacaoApplication
         int? limit = null)
     {
         int total = await _service.ContarAplicacoes(
-            appId,
             nome,
             sigla,
             aka,
@@ -37,7 +35,6 @@ public class AplicacaoApplication : IAplicacaoApplication
                 .WrapUp();
         
         return (await _service.BuscarAplicacoes(
-            appId,
             nome,
             sigla,
             aka,
