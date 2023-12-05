@@ -23,15 +23,15 @@ public class TipoRepository : ITipoRepository
     {
         return await _uow.DbConnection.QueryAsync<Tipo>(
             """
-                SELECT *
-                FROM Tipos
-                WHERE
-                    (@p_Id IS NULL OR Id = @p_Id) AND
-                    (@p_Nome IS NULL OR LOWER(Nome) ~ @p_Nome) AND
-                    (@p_Habilitado IS NULL OR Habilitado = @p_Habilitado)
-                ORDER BY Nome
-                OFFSET @p_Skip
-                LIMIT @p_Limit;
+            SELECT *
+            FROM Tipos
+            WHERE
+                (@p_Id IS NULL OR Id = @p_Id) AND
+                (@p_Nome IS NULL OR LOWER(Nome) ~ @p_Nome) AND
+                (@p_Habilitado IS NULL OR Habilitado = @p_Habilitado)
+            ORDER BY Nome
+            OFFSET @p_Skip
+            LIMIT @p_Limit;
             """,
             new
             {
@@ -50,12 +50,12 @@ public class TipoRepository : ITipoRepository
     {
         return await _uow.DbConnection.ExecuteScalarAsync<int>(
             """
-                SELECT COUNT(*)
-                FROM Tipos
-                WHERE
-                    (@p_Id IS NULL OR Id = @p_Id) AND
-                    (@p_Nome IS NULL OR LOWER(Nome) ~ @p_Nome) AND
-                    (@p_Habilitado IS NULL OR Habilitado = @p_Habilitado);
+            SELECT COUNT(*)
+            FROM Tipos
+            WHERE
+                (@p_Id IS NULL OR Id = @p_Id) AND
+                (@p_Nome IS NULL OR LOWER(Nome) ~ @p_Nome) AND
+                (@p_Habilitado IS NULL OR Habilitado = @p_Habilitado);
             """,
             new
             {
@@ -69,13 +69,13 @@ public class TipoRepository : ITipoRepository
     {
         return (await _uow.DbConnection.QueryAsync<Tipo>(
             """
-                SELECT *
-                FROM Tipos
-                WHERE
-                    Id = @p_Id
-                ORDER BY Nome
-                OFFSET @p_Skip
-                LIMIT @p_Limit;
+            SELECT *
+            FROM Tipos
+            WHERE
+                Id = @p_Id
+            ORDER BY Nome
+            OFFSET @p_Skip
+            LIMIT @p_Limit;
             """,
             new
             {

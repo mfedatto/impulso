@@ -20,7 +20,7 @@ public interface IAplicacaoRepository
         DateTime? vigenteEm = null);
     Task IncluirAplicacao(IAplicacao aplicacao);
     Task<IAplicacao?> BuscarAplicacaoPorId(Guid appId);
-    Task<IAplicacao> BuscarAplicacaoPorNome(string nome);
+    Task<IAplicacao?> BuscarAplicacaoPorNome(string nome);
     Task<IAplicacao> BuscarAplicacaoPorSigla(string sigla);
     Task AtualizarAplicacao(IAplicacao aplicacao);
     Task ExcluirAplicacao(Guid appId);

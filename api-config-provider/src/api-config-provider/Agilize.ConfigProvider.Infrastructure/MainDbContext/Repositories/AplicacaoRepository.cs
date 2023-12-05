@@ -26,18 +26,18 @@ public class AplicacaoRepository : IAplicacaoRepository
     {
         return await _uow.DbConnection.QueryAsync<Aplicacao>(
             """
-                SELECT *
-                FROM Aplicacoes
-                WHERE
-                    (@p_AppId = '00000000-0000-0000-0000-000000000000' OR AppId = @p_AppId::uuid) AND
-                    (@p_Nome IS NULL OR LOWER(Nome) ~ @p_Nome) AND
-                    (@p_Sigla IS NULL OR LOWER(Sigla) ~ @p_Sigla) AND
-                    (@p_Aka IS NULL OR LOWER(Aka) ~ @p_Aka) AND
-                    (@p_Habilitado IS NULL OR Habilitado = @p_Habilitado) AND
-                    (@p_VigenteEm IS NULL OR (VigenteDe IS NULL OR VigenteDe <= @p_VigenteEm::date) AND (VigenteAte IS NULL OR VigenteAte >= @p_VigenteEm::date))
-                ORDER BY Nome
-                OFFSET @p_Skip
-                LIMIT @p_Limit;
+            SELECT *
+            FROM Aplicacoes
+            WHERE
+                (@p_AppId = '00000000-0000-0000-0000-000000000000' OR AppId = @p_AppId::uuid) AND
+                (@p_Nome IS NULL OR LOWER(Nome) ~ @p_Nome) AND
+                (@p_Sigla IS NULL OR LOWER(Sigla) ~ @p_Sigla) AND
+                (@p_Aka IS NULL OR LOWER(Aka) ~ @p_Aka) AND
+                (@p_Habilitado IS NULL OR Habilitado = @p_Habilitado) AND
+                (@p_VigenteEm IS NULL OR (VigenteDe IS NULL OR VigenteDe <= @p_VigenteEm::date) AND (VigenteAte IS NULL OR VigenteAte >= @p_VigenteEm::date))
+            ORDER BY Nome
+            OFFSET @p_Skip
+            LIMIT @p_Limit;
             """,
             new
             {
@@ -98,10 +98,10 @@ public class AplicacaoRepository : IAplicacaoRepository
     {
         return (await _uow.DbConnection.QueryAsync<Aplicacao>(
                 """
-                    SELECT *
-                    FROM Aplicacoes
-                    WHERE
-                        AppId = @p_AppId::uuid;
+                SELECT *
+                FROM Aplicacoes
+                WHERE
+                    AppId = @p_AppId::uuid;
                 """,
                 new
                 {
@@ -115,10 +115,10 @@ public class AplicacaoRepository : IAplicacaoRepository
     {
         return (await _uow.DbConnection.QueryAsync<Aplicacao>(
                 """
-                    SELECT *
-                    FROM Aplicacoes
-                    WHERE
-                        LOWER(Nome) = @p_Nome;
+                SELECT *
+                FROM Aplicacoes
+                WHERE
+                    LOWER(Nome) = @p_Nome;
                 """,
                 new
                 {
@@ -132,10 +132,10 @@ public class AplicacaoRepository : IAplicacaoRepository
     {
         return (await _uow.DbConnection.QueryAsync<Aplicacao>(
                 """
-                    SELECT *
-                    FROM Aplicacoes
-                    WHERE
-                        LOWER(Sigla) = @p_Sigla;
+                SELECT *
+                FROM Aplicacoes
+                WHERE
+                    LOWER(Sigla) = @p_Sigla;
                 """,
                 new
                 {
@@ -148,15 +148,15 @@ public class AplicacaoRepository : IAplicacaoRepository
     {
         await _uow.DbConnection.ExecuteAsync(
             """
-                UPDATE Aplicacoes
-                SET
-                    Nome = @Nome,
-                    Sigla = @Sigla,
-                    Aka = @Aka,
-                    Habilitado = @Habilitado,
-                    VigenteDe = @VigenteDe,
-                    VigenteAte = @VigenteAte
-                WHERE AppId = @AppId;
+            UPDATE Aplicacoes
+            SET
+                Nome = @Nome,
+                Sigla = @Sigla,
+                Aka = @Aka,
+                Habilitado = @Habilitado,
+                VigenteDe = @VigenteDe,
+                VigenteAte = @VigenteAte
+            WHERE AppId = @AppId;
             """,
             aplicacao);
     }
@@ -165,8 +165,8 @@ public class AplicacaoRepository : IAplicacaoRepository
     {
         await _uow.DbConnection.ExecuteAsync(
             """
-                DELETE FROM Aplicacoes
-                WHERE AppId = @AppId;
+            DELETE FROM Aplicacoes
+            WHERE AppId = @AppId;
             """,
             new
             {
