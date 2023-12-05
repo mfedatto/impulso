@@ -1,4 +1,5 @@
 using Agilize.ConfigProvider.Domain.Aplicacao;
+using Agilize.ConfigProvider.Domain.Configuracao;
 using Agilize.ConfigProvider.Domain.Tipo;
 using Agilize.ConfigProvider.Service;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,5 +12,6 @@ public class ServiceInstaller : IServiceInstaller
     {
         services.AddScoped<IAplicacaoService, AplicacaoService>();
         services.AddScoped<ITipoService, TipoService>();
+        services.AddScoped<IConfiguracaoService, ConfiguracaoService>();
     }
 }

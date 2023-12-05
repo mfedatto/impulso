@@ -32,7 +32,7 @@ public class ConfiguracaoRepository : IConfiguracaoRepository
                 (@p_Nome IS NULL OR LOWER(Nome) ~ @p_Nome) AND
                 (@p_Habilitado IS NULL OR Habilitado = @p_Habilitado) AND
                 (VigenteDe IS NULL OR VigenteDe <= @p_VigenteEm::date) AND
-                (VigenteAte IS NULL OR VigenteAte >= @p_VigenteEm::date))
+                (VigenteAte IS NULL OR VigenteAte >= @p_VigenteEm::date)
             ORDER BY Nome
             OFFSET @p_Skip
             LIMIT @p_Limit;
@@ -64,7 +64,7 @@ public class ConfiguracaoRepository : IConfiguracaoRepository
                 (@p_Nome IS NULL OR LOWER(Nome) ~ @p_Nome) AND
                 (@p_Habilitado IS NULL OR Habilitado = @p_Habilitado) AND
                 (VigenteDe IS NULL OR VigenteDe <= @p_VigenteEm::date) AND
-                (VigenteAte IS NULL OR VigenteAte >= @p_VigenteEm::date))
+                (VigenteAte IS NULL OR VigenteAte >= @p_VigenteEm::date)
             """,
             new
             {
