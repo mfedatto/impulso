@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd9d8dd9-1909-4d64-b7f2-d6c26ead00a6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Application/AplicacaoApplication.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Application/AplicacaoApplication.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Aplicacao/IAplicacaoApplication.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Aplicacao/IAplicacaoApplication.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Aplicacao/IAplicacaoRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Aplicacao/IAplicacaoRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Aplicacao/IAplicacaoService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Aplicacao/IAplicacaoService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Infrastructure/MainDbContext/Repositories/AplicacaoRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Infrastructure/MainDbContext/Repositories/AplicacaoRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Service/AplicacaoService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Service/AplicacaoService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Controllers/Aplicacao/AplicacaoController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Controllers/Aplicacao/AplicacaoController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Agilize.ConfigProvider/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Application/ConfiguracaoApplication.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Application/ConfiguracaoApplication.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Configuracao/IConfiguracaoApplication.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Configuracao/IConfiguracaoApplication.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Configuracao/IConfiguracaoRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Configuracao/IConfiguracaoRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Configuracao/IConfiguracaoService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Configuracao/IConfiguracaoService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Infrastructure/MainDbContext/Repositories/ConfiguracaoRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Infrastructure/MainDbContext/Repositories/ConfiguracaoRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Infrastructure/MainDbContext/Repositories/TipoRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Infrastructure/MainDbContext/Repositories/TipoRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Service/ConfiguracaoService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Service/ConfiguracaoService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Controllers/Configuracao/ConfiguracaoController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Controllers/Configuracao/ConfiguracaoController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +100,7 @@
       <option name="presentableId" value="Default" />
       <updated>1701681291995</updated>
       <workItem from="1701681303362" duration="20753000" />
-      <workItem from="1701733584366" duration="18010000" />
+      <workItem from="1701733584366" duration="25822000" />
     </task>
     <servers />
   </component>

@@ -72,16 +72,13 @@ public class TipoRepository : ITipoRepository
             SELECT *
             FROM Tipos
             WHERE
-                Id = @p_Id
-            ORDER BY Nome
-            OFFSET @p_Skip
-            LIMIT @p_Limit;
+                Id = @p_Id;
             """,
             new
             {
                 p_Id = id
             }))
-            .SingleOrDefault<ITipo>();
+            .SingleOrDefault<ITipo>()!;
     }
 }
 

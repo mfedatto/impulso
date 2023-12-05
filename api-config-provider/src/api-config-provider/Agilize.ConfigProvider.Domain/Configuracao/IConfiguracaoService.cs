@@ -7,7 +7,7 @@ public interface IConfiguracaoService
         DateTime vigenteEm,
         int? idTipo = null,
         string? nome = null,
-        bool? habilitado = null,
+        bool habilitado = true,
         int? skip = 0,
         int? limit = null);
     Task<int> ContarConfiguracoes(
@@ -15,5 +15,5 @@ public interface IConfiguracaoService
         DateTime vigenteEm,
         int? idTipo = null,
         string? nome = null,
-        bool? habilitado = null);
+        bool habilitado = true);
 }

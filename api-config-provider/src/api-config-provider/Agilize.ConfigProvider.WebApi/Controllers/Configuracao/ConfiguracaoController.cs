@@ -24,7 +24,7 @@ public class ConfiguracaoController : Controller
         [FromQuery(Name = ArgumentosNomeados.VigenteEm)] DateTime? vigenteEm,
         [FromQuery(Name = ArgumentosNomeados.Nome)] string? nome = null,
         [FromQuery(Name = ArgumentosNomeados.IdTipo)] int? idTipo = null,
-        [FromQuery(Name = ArgumentosNomeados.Habilitado)] bool? habilitado = null,
+        [FromQuery(Name = ArgumentosNomeados.Habilitado)] bool habilitado = true,
         [FromQuery(Name = ArgumentosNomeados.Skip)] int? skip = 0,
         [FromQuery(Name = ArgumentosNomeados.Limit)] int? limit = null)
     {
