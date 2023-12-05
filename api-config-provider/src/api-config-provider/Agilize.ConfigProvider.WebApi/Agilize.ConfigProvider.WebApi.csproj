@@ -24,5 +24,11 @@
             <DependentUpon>appsettings.json</DependentUpon>
         </None>
     </ItemGroup>
+
+    <ItemGroup>
+      <Content Update="appsettings.Development.json">
+        <DependentUpon>appsettings.json</DependentUpon>
+      </Content>
+    </ItemGroup>
     
 </Project>
