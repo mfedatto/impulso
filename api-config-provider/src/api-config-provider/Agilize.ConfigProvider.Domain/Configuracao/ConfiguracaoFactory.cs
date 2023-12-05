@@ -37,4 +37,26 @@ public class ConfiguracaoFactory
             valor,
             habilitado);
     }
+    
+    public IConfiguracaoChaveValor<double> Create(
+        string chave,
+        double valor,
+        bool habilitado)
+    {
+        return Create<double, ConfiguracaoDouble>(
+            chave,
+            valor,
+            habilitado);
+    }
+    
+    public IConfiguracaoChaveValor<IEnumerable<double>> Create(
+        string chave,
+        IEnumerable<double> valor,
+        bool habilitado)
+    {
+        return Create<IEnumerable<double>, ConfiguracaoDoubleEnumerable>(
+            chave,
+            valor,
+            habilitado);
+    }
 }
