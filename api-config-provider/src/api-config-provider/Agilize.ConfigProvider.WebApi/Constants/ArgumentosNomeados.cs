@@ -12,4 +12,7 @@ public static class ArgumentosNomeados
     public const string Aka = "aka";
     public const string Habilitado = "habilitado";
     public const string VigenteEm = "vigente-em";
+    public const string Lista = "lista";
+    public const string PermiteNulo = "permite-nulo";
+    public const string IdPai = "id-pai";
 }

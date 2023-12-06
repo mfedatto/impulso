@@ -5,15 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd9d8dd9-1909-4d64-b7f2-d6c26ead00a6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Agilize.ConfigProvider/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Application/ConfiguracaoApplication.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Application/ConfiguracaoApplication.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Configuracao/IConfiguracaoApplication.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Configuracao/IConfiguracaoApplication.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Configuracao/IConfiguracaoRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Configuracao/IConfiguracaoRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Configuracao/IConfiguracaoService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Configuracao/IConfiguracaoService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Infrastructure/MainDbContext/Repositories/ConfiguracaoRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Infrastructure/MainDbContext/Repositories/ConfiguracaoRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Infrastructure/MainDbContext/Repositories/TipoRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Infrastructure/MainDbContext/Repositories/TipoRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Service/ConfiguracaoService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Service/ConfiguracaoService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Controllers/Configuracao/ConfiguracaoController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Controllers/Configuracao/ConfiguracaoController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Agilize.ConfigProvider/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agilize.ConfigProvider/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Application/ConfiguracaoApplication.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.CrossCutting/CompositionRoot/Application/ApplicationInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.CrossCutting/CompositionRoot/Application/ApplicationInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.CrossCutting/CompositionRoot/Domain/DomainInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.CrossCutting/CompositionRoot/Domain/DomainInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.CrossCutting/CompositionRoot/Infrastructure/InfrastructureInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.CrossCutting/CompositionRoot/Infrastructure/InfrastructureInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.CrossCutting/CompositionRoot/Service/ServiceInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.CrossCutting/CompositionRoot/Service/ServiceInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Configuracao/ConfiguracaoDouble.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Configuracao/ConfiguracaoDoubleEnumerable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Configuracao/ConfiguracaoFactory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Configuracao/ConfiguracaoString.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Configuracao/ConfiguracaoStringEnumerable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Configuracao/IChave.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Configuracao/IConfiguracaoApplication.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Configuracao/IConfiguracaoChaveValor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Configuracao/IConfiguracaoRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Configuracao/IConfiguracaoService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Configuracao/IValor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Wrappers/PagedListWrapperExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Wrappers/PagedListWrapperExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Infrastructure/MainDbContext/Repositories/AplicacaoRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Infrastructure/MainDbContext/Repositories/AplicacaoRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Infrastructure/MainDbContext/Repositories/ConfiguracaoRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Service/ConfiguracaoService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Constants/ArgumentosNomeados.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Constants/ArgumentosNomeados.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Constants/CabecalhosNomeados.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Constants/CabecalhosNomeados.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Constants/Rotas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Constants/Rotas.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Controllers/Aplicacao/AplicacaoController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Controllers/Aplicacao/AplicacaoController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Controllers/Configuracao/ConfiguracaoController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Controllers/Configuracao/GetConfiguracaoResponseModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Controllers/Configuracao/ModelExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.sln.DotSettings.user" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,29 +56,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;ReSpellerSettingsId&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.appearance",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;/home/fedatto/.config/JetBrains/Rider2023.2/resharper-host/DecompilerCache&quot;,
-      &quot;/home/fedatto/.config/JetBrains/Rider2023.2/resharper-host/SourcesCache&quot;,
-      &quot;/home/fedatto/.local/share/Symbols/src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "/home/fedatto/.config/JetBrains/Rider2023.2/resharper-host/DecompilerCache",
+      "/home/fedatto/.config/JetBrains/Rider2023.2/resharper-host/SourcesCache",
+      "/home/fedatto/.local/share/Symbols/src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Agilize.ConfigProvider.WebApi: http">
     <configuration name="Agilize.ConfigProvider.WebApi: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Agilize.ConfigProvider.WebApi.csproj" />
@@ -100,7 +120,7 @@
       <option name="presentableId" value="Default" />
       <updated>1701681291995</updated>
       <workItem from="1701681303362" duration="20753000" />
-      <workItem from="1701733584366" duration="25822000" />
+      <workItem from="1701733584366" duration="36998000" />
     </task>
     <servers />
   </component>
@@ -109,5 +129,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

@@ -2,5 +2,5 @@ namespace Agilize.ConfigProvider.WebApi.Constants;
 
 public static class CabecalhosNomeados
 {
-    public const string Competencia = "X-ConfigProvider-Competencia";
+    public const string VigenteEm = "X-ConfigProvider-VigenteEm";
 }

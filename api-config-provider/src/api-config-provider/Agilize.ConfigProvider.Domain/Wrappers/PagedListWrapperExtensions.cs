@@ -18,10 +18,10 @@ public static class PagedListWrapperExtensions
             payload: payload ?? Array.Empty<T>());
     }
     
-    public static PagedListWrapper<T> Map<T, TT>(
-        this PagedListWrapper<TT> wrapper, Func<TT, T>conversor)
+    public static PagedListWrapper<TT> Map<T, TT>(
+        this PagedListWrapper<T> wrapper, Func<T, TT>conversor)
     {
-        return new PagedListWrapper<T>(
+        return new PagedListWrapper<TT>(
             total: wrapper.Total,
             skip: wrapper.Skip,
             limit: wrapper.Limit,

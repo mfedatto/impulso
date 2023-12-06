@@ -1,4 +1,4 @@
-namespace Agilize.ConfigProvider.Domain.Configuracao;
+namespace Agilize.ConfigProvider.Domain.Chave;
 
 public interface IChave
 {

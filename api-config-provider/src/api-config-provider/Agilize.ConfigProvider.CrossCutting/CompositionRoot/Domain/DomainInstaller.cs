@@ -1,5 +1,4 @@
 using Agilize.ConfigProvider.Domain.Aplicacao;
-using Agilize.ConfigProvider.Domain.Configuracao;
 using Agilize.ConfigProvider.Domain.Tipo;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -11,6 +10,5 @@ public class DomainInstaller : IServiceInstaller
     {
         services.AddSingleton<AplicacaoFactory>();
         services.AddSingleton<TipoFactory>();
-        services.AddSingleton<ConfiguracaoFactory>();
     }
 }

@@ -135,7 +135,7 @@ public class AplicacaoRepository : IAplicacaoRepository
                 {
                     p_Sigla = sigla.ToLower()
                 }))
-            .SingleOrDefault<IAplicacao>();
+            .SingleOrDefault<IAplicacao>()!;
     }
 
     public async Task AtualizarAplicacao(IAplicacao aplicacao)

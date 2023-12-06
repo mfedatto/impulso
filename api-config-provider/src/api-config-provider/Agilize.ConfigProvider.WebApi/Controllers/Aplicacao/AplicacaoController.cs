@@ -33,7 +33,7 @@ public class AplicacaoController : Controller
     {
         if (vigenteEm.HasValue)
         {
-            Response.Headers.Append(CabecalhosNomeados.Competencia, vigenteEm.Value.ToString("yyyy-MM-dd"));
+            Response.Headers.Append(CabecalhosNomeados.VigenteEm, vigenteEm.Value.ToString("yyyy-MM-dd"));
         }
 
         return Ok((await _application.BuscarAplicacoes(
