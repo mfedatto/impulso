@@ -1,3 +1,4 @@
+using Agilize.ConfigProvider.Domain.Aplicacao;
 using Agilize.ConfigProvider.Domain.Chave;
 using Agilize.ConfigProvider.Domain.Wrappers;
 using Agilize.HttpExceptions;
@@ -7,11 +8,14 @@ namespace Agilize.ConfigProvider.Application;
 public class ChaveApplication : IChaveApplication
 {
     private readonly IChaveService _service;
+    private readonly IAplicacaoService _aplicacaoService;
 
     public ChaveApplication(
-        IChaveService service)
+        IChaveService service,
+        IAplicacaoService aplicacaoService)
     {
         _service = service;
+        _aplicacaoService = aplicacaoService;
     }
     
     public async Task<PagedListWrapper<IChave>> BuscarChaves(
@@ -36,9 +40,7 @@ public class ChaveApplication : IChaveApplication
             idChavePai,
             habilitado);
 
-        if (total == 0)
-            return Enumerable.Empty<IChave>()
-                .WrapUp();
+        if (0.Equals(total)) return Enumerable.Empty<IChave>().WrapUp();
         
         return (await _service.BuscarChaves(
                 appId,
@@ -52,5 +54,22 @@ public class ChaveApplication : IChaveApplication
                 skip,
                 limit))
             .WrapUp(skip ?? 0, limit, total);
+    }
+
+    public async Task<bool> AplicacaoExiste(
+        Guid appId)
+    {
+        return (await _aplicacaoService.BuscarAplicacaoPorId(appId)) is not null;
+    }
+
+    public async Task<IChave> BuscarChavePorId(
+        Guid appId,
+        int id,
+        DateTime vigenteEm)
+    {
+        return await _service.BuscarChavePorId(
+            appId,
+            id,
+            vigenteEm);
     }
 }

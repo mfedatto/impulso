@@ -6,11 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="dd9d8dd9-1909-4d64-b7f2-d6c26ead00a6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Agilize.ConfigProvider/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agilize.ConfigProvider/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Application/AplicacaoApplication.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Application/AplicacaoApplication.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Application/ChaveApplication.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Application/ChaveApplication.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.CrossCutting/CompositionRoot/Application/ApplicationInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.CrossCutting/CompositionRoot/Application/ApplicationInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.CrossCutting/CompositionRoot/Infrastructure/InfrastructureInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.CrossCutting/CompositionRoot/Infrastructure/InfrastructureInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.CrossCutting/CompositionRoot/Service/ServiceInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.CrossCutting/CompositionRoot/Service/ServiceInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Application/TipoApplication.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Application/TipoApplication.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.CrossCutting/Agilize.ConfigProvider.CrossCutting.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.CrossCutting/Agilize.ConfigProvider.CrossCutting.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.CrossCutting/CompositionRoot/WebApi/WebApiConfigurator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.CrossCutting/CompositionRoot/WebApi/WebApiConfigurator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.CrossCutting/CompositionRoot/WebApi/WebApiInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.CrossCutting/CompositionRoot/WebApi/WebApiInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Chave/IChaveApplication.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Chave/IChaveApplication.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Chave/IChaveRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Chave/IChaveRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Chave/IChaveService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Chave/IChaveService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Infrastructure/MainDbContext/Repositories/AplicacaoRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Infrastructure/MainDbContext/Repositories/AplicacaoRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Infrastructure/MainDbContext/Repositories/ChaveRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Infrastructure/MainDbContext/Repositories/ChaveRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Service/ChaveService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Service/ChaveService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Constants/Rotas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Constants/Rotas.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Controllers/Chave/ChaveController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Controllers/Chave/ChaveController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +44,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    ".NET Launch Settings Profile.Agilize.ConfigProvider.WebApi: http.executor": "Run",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -45,13 +55,13 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.appearance",
+    "settings.editor.selected.configurable": "editor.preferences.smartKeys_rider",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "/home/fedatto/.config/JetBrains/Rider2023.2/resharper-host/DecompilerCache",
-      "/home/fedatto/.config/JetBrains/Rider2023.2/resharper-host/SourcesCache",
+      "/home/fedatto/.config/JetBrains/Rider2023.3/resharper-host/DecompilerCache",
+      "/home/fedatto/.config/JetBrains/Rider2023.3/resharper-host/SourcesCache",
       "/home/fedatto/.local/share/Symbols/src"
     ]
   }
@@ -97,7 +107,9 @@
       <option name="presentableId" value="Default" />
       <updated>1701681291995</updated>
       <workItem from="1701681303362" duration="20753000" />
-      <workItem from="1701733584366" duration="41071000" />
+      <workItem from="1701733584366" duration="42984000" />
+      <workItem from="1701883403888" duration="415000" />
+      <workItem from="1701883911186" duration="7128000" />
     </task>
     <servers />
   </component>

@@ -13,6 +13,8 @@ public class WebApiConfigurator : IApplicationConfigurator
             app.UseSwaggerUI();
         }
 
+        app.MapPrometheusScrapingEndpoint();
+        
         //app.UseHttpsRedirection();
         
         app.UseRouting();

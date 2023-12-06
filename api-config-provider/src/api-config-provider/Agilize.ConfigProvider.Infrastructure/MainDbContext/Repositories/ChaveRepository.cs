@@ -97,6 +97,30 @@ public class ChaveRepository : IChaveRepository
                 p_Habilitado = habilitado
             });
     }
+
+    public async Task<IChave> BuscarChavePorId(
+        Guid appId,
+        int id,
+        DateTime vigenteEm)
+    {
+        return (await _uow.DbConnection.QueryAsync<Chave>(
+                """
+                SELECT *
+                FROM Chaves
+                WHERE
+                    AppId = @p_AppId::uuid AND
+                    Id = @p_Id AND
+                    (VigenteDe IS NULL OR VigenteDe <= @p_VigenteEm::date) AND
+                    (VigenteAte IS NULL OR VigenteAte >= @p_VigenteEm::date)
+                """,
+                new
+                {
+                    p_AppId = appId,
+                    p_Id = id,
+                    p_VigenteEm = vigenteEm
+                }))
+            .SingleOrDefault<IChave>()!;
+    }
 }
 
 file record Chave : IChave

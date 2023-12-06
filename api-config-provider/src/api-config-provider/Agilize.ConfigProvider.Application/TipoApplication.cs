@@ -26,9 +26,7 @@ public class TipoApplication : ITipoApplication
             nome,
             habilitado);
 
-        if (total == 0)
-            return Enumerable.Empty<ITipo>()
-                .WrapUp();
+        if (0.Equals(total)) return Enumerable.Empty<ITipo>().WrapUp();
         
         return (await _service.BuscarTipos(
                 id,

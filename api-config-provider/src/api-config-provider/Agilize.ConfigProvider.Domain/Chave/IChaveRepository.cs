@@ -22,4 +22,8 @@ public interface IChaveRepository
         bool? permiteNulo = null,
         int? idChavePai = null,
         bool habilitado = true);
+    Task<IChave> BuscarChavePorId(
+        Guid appId,
+        int id,
+        DateTime vigenteEm);
 }

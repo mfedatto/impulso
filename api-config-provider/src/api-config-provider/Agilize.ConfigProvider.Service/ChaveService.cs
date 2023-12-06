@@ -1,4 +1,6 @@
+using Agilize.ConfigProvider.Domain.Aplicacao;
 using Agilize.ConfigProvider.Domain.Chave;
+using Agilize.ConfigProvider.Domain.Exceptions;
 using Agilize.HttpExceptions;
 
 namespace Agilize.ConfigProvider.Service;
@@ -7,7 +9,8 @@ public class ChaveService : IChaveService
 {
     private readonly IChaveRepository _repository;
 
-    public ChaveService(IChaveRepository repository)
+    public ChaveService(
+        IChaveRepository repository)
     {
         _repository = repository;
     }
@@ -56,5 +59,29 @@ public class ChaveService : IChaveService
             permiteNulo,
             idChavePai,
             habilitado);
+    }
+
+    public async Task<IChave> BuscarChavePorId(
+        Guid appId,
+        int id,
+        DateTime vigenteEm)
+    {
+        IChave? result;
+        
+        try
+        {
+            result =  await _repository.BuscarChavePorId(
+                appId,
+                id,
+                vigenteEm);
+            
+            if (result is null) throw new ChaveNaoEncontradaException();
+        }
+        catch (InvalidOperationException ex)
+        {
+            throw new MaisDeUmaChaveEncontradaException(ex);
+        }
+
+        return result;
     }
 }

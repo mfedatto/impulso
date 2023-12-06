@@ -14,4 +14,5 @@ public static class Rotas
     public const string TiposGetTipo = $"{{{ArgumentosNomeados.Id}}}";
     public const string Chaves = $"{Aplicacoes}/{{{ArgumentosNomeados.AppId}}}/chaves";
     public const string ChavesGetChaves = "";
+    public const string ChavesGetChave = $"{{{ArgumentosNomeados.Id}}}";
 }

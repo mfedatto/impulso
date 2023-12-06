@@ -15,4 +15,10 @@ public interface IChaveApplication
         bool habilitado = true,
         int? skip = 0,
         int? limit = null);
+    Task<bool> AplicacaoExiste(
+        Guid appId);
+    Task<IChave> BuscarChavePorId(
+        Guid appId,
+        int id,
+        DateTime vigenteEm);
 }

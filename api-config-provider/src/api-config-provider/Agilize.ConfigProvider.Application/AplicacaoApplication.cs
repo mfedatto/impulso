@@ -30,9 +30,7 @@ public class AplicacaoApplication : IAplicacaoApplication
             habilitado,
             vigenteEm);
 
-        if (total == 0)
-            return Enumerable.Empty<IAplicacao>()
-                .WrapUp();
+        if (0.Equals(total)) return Enumerable.Empty<IAplicacao>().WrapUp();
         
         return (await _service.BuscarAplicacoes(
             nome,

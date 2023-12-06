@@ -48,4 +48,23 @@ public class ChaveController : Controller
                 limit))
             .Map<IChave, GetChaveResponseModel>(chave => chave.ToGetResponseModel()));
     }
+    
+    [HttpGet(Rotas.ChavesGetChave)]
+    public async Task<ActionResult<GetChaveResponseModel>> Get_ById(
+        [FromRoute(Name = ArgumentosNomeados.AppId)] Guid appId,
+        [FromRoute(Name = ArgumentosNomeados.Id)] int id,
+        [FromQuery(Name = ArgumentosNomeados.VigenteEm)] DateTime? vigenteEm)
+    {
+        if (!await _application.AplicacaoExiste(appId)) throw new AplicacaoNaoEncontradaException();
+        
+        vigenteEm = vigenteEm ?? DateTime.Now;
+        
+        Response.Headers.Append(CabecalhosNomeados.VigenteEm, vigenteEm.Value.ToString("yyyy-MM-dd"));
+        
+        return Ok((await _application.BuscarChavePorId(
+                appId,
+                id,
+                vigenteEm.Value))
+            .ToGetResponseModel());
+    }
 }
