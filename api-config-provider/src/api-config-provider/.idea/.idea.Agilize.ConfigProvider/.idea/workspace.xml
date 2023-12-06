@@ -6,34 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="dd9d8dd9-1909-4d64-b7f2-d6c26ead00a6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Agilize.ConfigProvider/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agilize.ConfigProvider/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Application/ConfiguracaoApplication.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Application/ChaveApplication.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Application/ChaveApplication.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.CrossCutting/CompositionRoot/Application/ApplicationInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.CrossCutting/CompositionRoot/Application/ApplicationInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.CrossCutting/CompositionRoot/Domain/DomainInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.CrossCutting/CompositionRoot/Domain/DomainInstaller.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.CrossCutting/CompositionRoot/Infrastructure/InfrastructureInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.CrossCutting/CompositionRoot/Infrastructure/InfrastructureInstaller.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.CrossCutting/CompositionRoot/Service/ServiceInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.CrossCutting/CompositionRoot/Service/ServiceInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Configuracao/ConfiguracaoDouble.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Configuracao/ConfiguracaoDoubleEnumerable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Configuracao/ConfiguracaoFactory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Configuracao/ConfiguracaoString.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Configuracao/ConfiguracaoStringEnumerable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Configuracao/IChave.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Configuracao/IConfiguracaoApplication.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Configuracao/IConfiguracaoChaveValor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Configuracao/IConfiguracaoRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Configuracao/IConfiguracaoService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Configuracao/IValor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Wrappers/PagedListWrapperExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Domain/Wrappers/PagedListWrapperExtensions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Infrastructure/MainDbContext/Repositories/AplicacaoRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.Infrastructure/MainDbContext/Repositories/AplicacaoRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Infrastructure/MainDbContext/Repositories/ConfiguracaoRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.Service/ConfiguracaoService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Constants/ArgumentosNomeados.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Constants/ArgumentosNomeados.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Constants/CabecalhosNomeados.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Constants/CabecalhosNomeados.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Constants/Rotas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Constants/Rotas.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Controllers/Aplicacao/AplicacaoController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Controllers/Aplicacao/AplicacaoController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Controllers/Configuracao/ConfiguracaoController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Controllers/Configuracao/GetConfiguracaoResponseModel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.WebApi/Controllers/Configuracao/ModelExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agilize.ConfigProvider.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Agilize.ConfigProvider.sln.DotSettings.user" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +97,7 @@
       <option name="presentableId" value="Default" />
       <updated>1701681291995</updated>
       <workItem from="1701681303362" duration="20753000" />
-      <workItem from="1701733584366" duration="36998000" />
+      <workItem from="1701733584366" duration="41071000" />
     </task>
     <servers />
   </component>

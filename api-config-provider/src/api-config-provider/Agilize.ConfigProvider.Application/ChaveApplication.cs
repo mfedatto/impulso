@@ -6,7 +6,15 @@ namespace Agilize.ConfigProvider.Application;
 
 public class ChaveApplication : IChaveApplication
 {
-    public Task<PagedListWrapper<IChave>> BuscarChaves(
+    private readonly IChaveService _service;
+
+    public ChaveApplication(
+        IChaveService service)
+    {
+        _service = service;
+    }
+    
+    public async Task<PagedListWrapper<IChave>> BuscarChaves(
         Guid appId,
         DateTime vigenteEm,
         string? nome = null,
@@ -18,6 +26,31 @@ public class ChaveApplication : IChaveApplication
         int? skip = 0,
         int? limit = null)
     {
-        throw new Http501NaoImplementadoException();
+        int total = await _service.ContarChaves(
+            appId,
+            vigenteEm,
+            nome,
+            idTipo,
+            lista,
+            permiteNulo,
+            idChavePai,
+            habilitado);
+
+        if (total == 0)
+            return Enumerable.Empty<IChave>()
+                .WrapUp();
+        
+        return (await _service.BuscarChaves(
+                appId,
+                vigenteEm,
+                nome,
+                idTipo,
+                lista,
+                permiteNulo,
+                idChavePai,
+                habilitado,
+                skip,
+                limit))
+            .WrapUp(skip ?? 0, limit, total);
     }
 }

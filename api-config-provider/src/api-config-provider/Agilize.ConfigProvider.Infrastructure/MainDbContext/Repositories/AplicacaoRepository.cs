@@ -101,7 +101,7 @@ public class AplicacaoRepository : IAplicacaoRepository
                 {
                     p_AppId = appId
                 }))
-            .SingleOrDefault<IAplicacao>();
+            .SingleOrDefault<IAplicacao>()!;
     }
 
     public async Task<IAplicacao?> BuscarAplicacaoPorNome(
@@ -118,7 +118,7 @@ public class AplicacaoRepository : IAplicacaoRepository
                 {
                     p_Nome = nome.ToLower()
                 }))
-            .SingleOrDefault<IAplicacao>();
+            .SingleOrDefault<IAplicacao>()!;
     }
 
     public async Task<IAplicacao?> BuscarAplicacaoPorSigla(

@@ -1,4 +1,5 @@
 using Agilize.ConfigProvider.Domain.Aplicacao;
+using Agilize.ConfigProvider.Domain.Chave;
 using Agilize.ConfigProvider.Domain.MainDbContext;
 using Agilize.ConfigProvider.Domain.Tipo;
 using Agilize.ConfigProvider.Infrastructure.MainDbContext;
@@ -14,5 +15,6 @@ public class InfrastructureInstaller : IServiceInstaller
         services.AddScoped<IUnitOfWork, UnitOfWork>();
         services.AddScoped<IAplicacaoRepository, AplicacaoRepository>();
         services.AddScoped<ITipoRepository, TipoRepository>();
+        services.AddScoped<IChaveRepository, ChaveRepository>();
     }
 }
